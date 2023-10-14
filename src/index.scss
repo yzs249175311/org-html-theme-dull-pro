@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font-size: 2svh;
+  --brand-hue: 200;
+  --brand-saturation: 100%;
+  --brand-lightness: 50%;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --brand-color-light: hsl(
+    var(--brand-hue) var(--brand-saturation) var(--brand-lightness)
+  );
+  --bg-face-1: hsl(var(--brand-hue) 25% 90%);
+  --bg-face-2: hsl(var(--brand-hue) 20% 99%);
+  --bg-face-3: hsl(var(--brand-hue) 20% 92%);
+  --bg-face-4: hsl(var(--brand-hue) 20% 85%);
+
+  --text-face-1: hsl(var(--brand-hue) var(--brand-saturation) 10%);
+  --text-face-2: hsl(var(--brand-hue) 30% 30%);
+
+  --shadow-face-1: var(--brand-hue) 10% 20%;
+  --shadow-strength: 0.02;
+
+  .rad-shadow {
+    box-shadow:
+      0 2.8px 2.2px
+        hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.03)),
+      0 6.7px 5.3px
+        hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.01)),
+      0 12.5px 10px
+        hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.02)),
+      0 22.3px 17.9px
+        hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.02)),
+      0 41.8px 33.4px
+        hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.03)),
+      0 100px 80px hsl(var(--surface-shadow) / var(--shadow-strength));
+  }
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --brand-color: hsl(
+    var(--brand-hue) calc(var(--brand-saturation) / 2)
+      calc(var(--brand-lightness) / 1.5)
+  );
+  --text-face-1: hsl(var(--brand-hue) 15% 85%);
+  --text-face-2: hsl(var(--brand-hue) 5% 65%);
+
+  --bg-face-1: hsl(var(--brand-hue) 10% 10%);
+  --bg-face-2: hsl(var(--brand-hue) 10% 15%);
+  --bg-face-3: hsl(var(--brand-hue) 5% 20%);
+  --bg-face-4: hsl(var(--brand-hue) 5% 25%);
+
+  --shadow-face-1: var(--brand-hue) 50% 3%;
+  --shadow-strength: 0.8;
+
+  .rad-shadow {
+    box-shadow:
+      0 2.8px 2.2px
+        hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.03)),
+      0 6.7px 5.3px
+        hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.01)),
+      0 12.5px 10px
+        hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.02)),
+      0 22.3px 17.9px
+        hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.02)),
+      0 41.8px 33.4px
+        hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.03)),
+      0 100px 80px hsl(var(--surface-shadow) / var(--shadow-strength));
+  }
+}
+
+body {
+  color: var(--text-face-2);
+  background-color: var(--bg-face-1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-face-1);
+}

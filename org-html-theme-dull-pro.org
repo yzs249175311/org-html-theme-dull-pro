@@ -1,0 +1,418 @@
+:PROPERTIES:
+:ID:       278e7d6c-fc2c-437d-a231-2b7db219a369
+:END:
+
+#+title: hello world
+#+author: yzs
+#+date: [2023-02-11 六]
+
+
+* 一级标题
+
+bold: *bold*
+italic: /italic/
+underlined: _underlined_
+verbatim: =verbatim=
+code: ~code~
+strike-through: +strike-through+
+
+- 无序列表
+  - 无序列表
+    - 无序列表
+      1. 有序列表
+        文件链接: [[file:readme.md][readme]]
+      2. 有序列表
+        网页链接:[[http://www.baidu.com][百度]]
+      3. 有序列表
+      4. 有序列表
+  - 无序列表
+
+    | thead | thead | thead |
+    |-------+-------+-------|
+    | cell  | cell  | cell  |
+    | 中文  | 中文  | cell  |
+    |       |       |       |
+    |       |       |       |
+    |       |       |       |
+
+
+1. 有序列表
+   1) 有序列表
+      - 无序列表
+        - 无序列表
+      - 无序列表
+   2) 有序列表
+   3) 有序列表
+
+** 二级标题 1                              :你好:世界:冒险岛:还是觉得你最好:
+*** 三级标题
+**** 四级标题
+content:
+
+#+begin_src  js
+
+  let name = "hello world"
+
+  function greeting() {
+      console.log("hello world")
+  }
+
+  class Bird {
+      value
+      #value
+
+      function sing() {
+          console.log("hello world")
+          console.log("long long long long long long long long long long long long long long long long long long long long long long long long line.")
+      }
+  }
+
+#+end_src
+
+quote:
+#+begin_quote
+  quote
+  quote
+  quote
+  quote
+[[file:./public/image.jpg]]
+long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.
+#+end_quote
+
+verse:
+
+#+BEGIN_VERSE
+ Great clouds overhead
+ Tiny black birds rise and fall
+ Snow covers Emacs
+
+    ---AlexSchroeder
+
+[[file:./public/image.jpg]]
+
+long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.
+#+END_VERSE
+
+center:
+#+BEGIN_CENTER
+Everything should be made as simple as possible, \\
+but not any simpler
+
+
+long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.
+#+END_CENTER
+** 二级标题 二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 22 :asdf:adf:你好:
+
+*** 三级标题
+1. 有序列表
+   1) 有序列表
+      1) 有序列表
+   2) 有序列表
+   3) 有有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表序列表
+
+
+#+begin_src  shell
+  代码块
+  代码块
+  代码块
+  代码块
+#+end_src
+
+
+#+begin_src  shell
+  case $1 in
+      "up")
+          pactl set-sink-volume @DEFAULT_SINK@ +5% ;;
+      "down")
+          pactl set-sink-volume @DEFAULT_SINK@ -5% ;;
+      "mute")
+          pactl set-sink-mute @DEFAULT_SINK@ toggle
+  esac
+
+#+end_src
+
+#+begin_src  js
+
+  let name = "hello world"
+
+  function greeting() {
+      console.log("hello world")
+  }
+
+  class Bird {
+      value
+      #value
+
+      function sing() {
+          console.log("hello world")
+      }
+  }
+
+#+end_src
+
+
+#+begin_example
+    example
+    example
+    example
+    example
+
+    long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.
+#+end_example
+
+quote:
+#+begin_quote
+  quote
+  quote
+  quote
+  quote
+
+  // 注释
+
+[[file:./public/image.jpg]]
+
+long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.
+#+end_quote
+
+verse:
+
+#+BEGIN_VERSE
+ Great clouds overhead
+ Tiny black birds rise and fall
+ Snow covers Emacs
+
+    ---AlexSchroeder
+
+[[file:./public/image.jpg]]
+
+long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.
+#+END_VERSE
+
+center:
+#+BEGIN_CENTER
+Everything should be made as simple as possible, \\
+but not any simpler
+
+
+long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.
+#+END_CENTER
+
+
+*** TODO 三级标题                                             :hello:world:
+*** DONE 三级标题                                             :hello:world:
+
+- [-] task 1 [60%]
+  - [X] task 1.1
+  - [ ] task 1.2
+  - [ ] task 1.2
+  - [X] task 1.2
+  - [X] task 1.2
+
+
+1. [-] task 1 [2/5]
+   1. [X] task 1.1
+   2. [ ] task 1.2
+   3. [X] task 1.3
+   4. [ ] task 1.4
+   5. [ ] task 1.5
+
+*** DONE this is my task
+CLOSED: [2023-02-12 日 14:21] DEADLINE: <2023-02-12 日> SCHEDULED: <2023-02-12 日>
+
+*** TODO this is my task
+SCHEDULED: <2023-02-17 五 +1d>
+:PROPERTIES:
+:LAST_REPEAT: [2023-02-12 日 14:21]
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-02-12 日 14:21]
+- State "DONE"       from "TODO"       [2023-02-12 日 14:21]
+- State "DONE"       from "TODO"       [2023-02-12 日 14:21]
+- State "DONE"       from "TODO"       [2023-02-12 日 14:21]
+- State "DONE"       from "TODO"       [2023-02-12 日 14:21]
+:END:
+
+
+
+** footnote test
+
+- Footnote one: name[fn:1]
+- Footnote two: anonymous[fn::This is the inline definition of this footnote]
+- Footnote three: name and definition[fn:def:a definition]
+
+
+
+[fn:1]this is first notefoote definition.this is first notefoote definition.this is first notefoote definition
+
+* 一级标题2
+bold: *bold*
+italic: /italic/
+underlined: _underlined_
+verbatim: =verbatim=
+code: ~code~
+strike-through: +strike-through+
+
+
+- 无序列表
+  - 无序列表
+    - 无序列表
+      1. 有序列表
+      2. 有序列表
+      3. 有序列表
+      4. 有序列表
+  - 无序列表
+
+    | thead | thead | thead |
+    |-------+-------+-------|
+    | cell  | cell  | cell  |
+    | 中文  | 中文  | cell  |
+    |       |       |       |
+    |       |       |       |
+    |       |       |       |
+
+
+1. 有序列表
+   1) 有序列表
+      - 无序列表
+        - 无序列表
+      - 无序列表
+   2) 有序列表
+   3) 有序列表
+
+** 二级标题 1                              :你好:世界:冒险岛:还是觉得你最好:
+
+** footnote test 2
+
+- Footnote two one: anonymous[fn:def]
+- Footnote two one: anonymous[fn::2.1 This is the inline definition of this footnote]
+- Footnote two two: name and definition[fn:2:2.2 a definition]
+
+** 二级标题 二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 22
+
+*** 三级标题
+1. 有序列表
+   1) 有序列表
+      1) 有序列表
+   2) 有序列表
+   3) 有序列表
+    #+begin_src  shell
+    代码块
+    代码块
+    代码块
+    代码块
+    #+end_src
+
+#+begin_example
+
+  example
+  example
+  example
+  example
+
+#+end_example
+
+#+begin_quote
+  quote
+  quote
+  quote
+  quote
+  quote
+#+end_quote
+
+
+*** TODO 三级标题                                             :hello:world:
+*** DONE 三级标题                                             :hello:world:
+
+- [-] task 1 [60%]
+  - [X] task 1.1
+  - [ ] task 1.2
+  - [ ] task 1.2
+  - [X] task 1.2
+  - [X] task 1.2
+
+
+1. [-] task 1 [2/5]
+   1. [X] task 1.1
+   2. [ ] task 1.2
+   3. [X] task 1.3
+   4. [ ] task 1.4
+   5. [ ] task 1.5
+
+*** DONE this is my task
+CLOSED: [2023-02-12 日 14:21] DEADLINE: <2023-02-12 日> SCHEDULED: <2023-02-12 日>
+
+*** TODO this is my task
+SCHEDULED: <2023-02-17 五 +1d>
+:PROPERTIES:
+:LAST_REPEAT: [2023-02-12 日 14:21]
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2023-02-12 日 14:21]
+- State "DONE"       from "TODO"       [2023-02-12 日 14:21]
+- State "DONE"       from "TODO"       [2023-02-12 日 14:21]
+- State "DONE"       from "TODO"       [2023-02-12 日 14:21]
+- State "DONE"       from "TODO"       [2023-02-12 日 14:21]
+:END:
+
+
+[fn:1]this is first footnote one
+
+* 读书目录
+** 2022年
+*** 第一轮 [3/9]
+**** DONE 《苏菲的世界》 - 乔斯坦·贾德                         :哲学:小说:
+CLOSED: [2022-08-22 Mon 01:31]
+**** TODO 《酒吧长谈》 - 马里奥·巴尔加斯·略萨
+**** DONE 《濒死经验的启示》 - 木内鹤彦
+CLOSED: [2022-10-18 周二 02:30]
+**** TODO 《地球编年史》 - 撒迦利亚·西琴
+**** DONE 《前世今生》 - 布莱恩·魏斯                              :心理学:
+CLOSED: [2022-11-02 三 12:09]
+**** TODO 《中国人的性格》 - 李明良
+**** TODO 《跳出头脑，融入生活》- [美] 史蒂文·C.海斯 / [美] 斯宾斯·史密斯 :心理学:
+**** DONE 《怪诞行为学》 - 丹‧艾瑞利                              :心理学:
+CLOSED: [2023-01-31 Tue 04:37]
+- State "DONE"       from "TODO"       [2023-01-31 Tue 04:37]
+**** TODO 《第二种忠诚》 - 刘宾燕
+** TODO 《模型思维》 - 斯科特•佩奇
+** TODO 《思考，快与慢》- 丹尼尔·卡尼曼
+** TODO 《万能金钥》- 查尔斯•哈尼尔                                 :心理学:
+** TODO 《当下的力量》 - 埃克哈特•托利                              :心理学:
+** TODO 《反脆弱》                                                  :心理学:
+** TODO 《刻意练习》                                                :心理学:
+** TODO 关于爱情 [0/6]                                           :爱情:小说:
+- [ ] 《爱的艺术》
+- [ ] 《亲密关系的秘密》
+- [ ] 《如何正确吵架》
+- [ ] 《被讨厌的勇气》
+- [ ] 《男人来自火星女人来自金星》
+- [ ] 《亲密关系》
+** TODO 《哲学的慰藉》 - 阿兰·德波顿                                  :哲学:
+** TODO 《包法利夫人》 - 居斯塔夫·福楼拜                              :小说:
+** TODO 《红与黑》 - 司汤达
+** TODO 《哲学能做什么》 - 加里·古廷
+** TODO 《沉思录》
+** TODO 《追忆似水年华》
+** TODO 《人间喜剧》 - 巴尔扎克
+** TODO 《瓦尔登湖》 - 卢梭
+** TODO 《非暴力沟通》 - 马歇尔·卢森堡
+** TODO 《堂吉诃德》
+** TODO 《西西弗神话》
+** TODO 《神曲》
+
+
+* 已读
+** DONE 《当尼采哭泣》 - 欧文·亚隆                                              :哲学:心理学:
+CLOSED: [2022-08-07 Sun 02:48]
+** DONE 《图解HTTP》- 上野宣、于均良
+CLOSED: [2022-07-31 Sun 15:50] SCHEDULED: <2022-07-27 Wed> DEADLINE: <2022-07-30 Sat>
+** DONE 《百年孤独》 - 加西亚•马尔克斯                                                :小说:
+CLOSED: [2021-12-25 周六 14:44]
+** DONE 《1984》 - 乔治·奥威尔                                                  :小说:
+CLOSED: [2022-06-01 Wed 01:27]
+** DONE 《刀锋》 - 威廉·萨默赛特·毛姆                                                :小说:
+CLOSED: [2022-04-23 Sat 03:41]
+** DONE 《月亮与六便士》 - 威廉·萨默赛特·毛姆                                            :小说:
+CLOSED: [2022-01-13 Thu 00:24]
+** DONE 《十分钟冥想》                                                         :心理学:
+CLOSED: [2022-07-27 Wed 14:37]

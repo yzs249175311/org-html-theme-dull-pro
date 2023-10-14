@@ -1,0 +1,28 @@
+.scrollBar {
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-track {
+    background: tansparent;
+  }
+}
+
+.nav-track {
+  li,
+  a {
+    &:has(+ div .Mui-selected) {
+      span {
+        color: var(--brand-color);
+      }
+    }
+  }
+
+  .Mui-selected {
+    span {
+      color: var(--brand-color);
+    }
+  }
+}
