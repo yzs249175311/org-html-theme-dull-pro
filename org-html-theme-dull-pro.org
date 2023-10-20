@@ -111,7 +111,7 @@ long line.long line.long line.long line.long line.long line.long line.long line.
    3) 有有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表序列表
 
 
-#+begin_src  shell
+#+begin_src  bash
   代码块
   代码块
   代码块
@@ -119,7 +119,7 @@ long line.long line.long line.long line.long line.long line.long line.long line.
 #+end_src
 
 
-#+begin_src  shell
+#+begin_src  bash
   case $1 in
       "up")
           pactl set-sink-volume @DEFAULT_SINK@ +5% ;;
@@ -295,7 +295,7 @@ strike-through: +strike-through+
       1) 有序列表
    2) 有序列表
    3) 有序列表
-    #+begin_src  shell
+    #+begin_src bash
     代码块
     代码块
     代码块

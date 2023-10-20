@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root {
+	font-family: sans-serif,monospace;
   font-size: 2svh;
   --brand-hue: 200;
   --brand-saturation: 100%;
@@ -27,16 +29,16 @@
   .rad-shadow {
     box-shadow:
       0 2.8px 2.2px
-        hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.03)),
+        hsl(var(--shadow-face-1) / calc(var(--shadow-strength) + 0.03)),
       0 6.7px 5.3px
-        hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.01)),
+        hsl(var(--shadow-face-1) / calc(var(--shadow-strength) + 0.01)),
       0 12.5px 10px
-        hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.02)),
+        hsl(var(--shadow-face-1) / calc(var(--shadow-strength) + 0.02)),
       0 22.3px 17.9px
-        hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.02)),
+        hsl(var(--shadow-face-1) / calc(var(--shadow-strength) + 0.02)),
       0 41.8px 33.4px
-        hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.03)),
-      0 100px 80px hsl(var(--surface-shadow) / var(--shadow-strength));
+        hsl(var(--shadow-face-1) / calc(var(--shadow-strength) + 0.03)),
+      0 100px 80px hsl(var(--shadow-face-1) / var(--shadow-strength));
   }
 }
 
@@ -60,16 +62,16 @@
   .rad-shadow {
     box-shadow:
       0 2.8px 2.2px
-        hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.03)),
+        hsl(var(--shadow-face-1) / calc(var(--shadow-strength) + 0.03)),
       0 6.7px 5.3px
-        hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.01)),
+        hsl(var(--shadow-face-1) / calc(var(--shadow-strength) + 0.01)),
       0 12.5px 10px
-        hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.02)),
+        hsl(var(--shadow-face-1) / calc(var(--shadow-strength) + 0.02)),
       0 22.3px 17.9px
-        hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.02)),
+        hsl(var(--shadow-face-1) / calc(var(--shadow-strength) + 0.02)),
       0 41.8px 33.4px
-        hsl(var(--surface-shadow) / calc(var(--shadow-strength) + 0.03)),
-      0 100px 80px hsl(var(--surface-shadow) / var(--shadow-strength));
+        hsl(var(--shadow-face-1) / calc(var(--shadow-strength) + 0.03)),
+      0 100px 80px hsl(var(--shadow-face-1) / var(--shadow-strength));
   }
 }
 

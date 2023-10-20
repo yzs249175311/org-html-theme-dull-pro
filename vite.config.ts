@@ -9,7 +9,7 @@ export default defineConfig({
     open: "org-html-theme-dull-pro.html",
   },
   server: {
-    open: "./src/org-html-theme-dull-pro.html",
+    open: "./org-html-theme-dull-pro.html",
     hmr: false,
   },
   resolve: {
@@ -31,7 +31,6 @@ export default defineConfig({
         // 资源文件名 css 图片等等
         // assetFileNames: 'assets/[name].[ext]',
         assetFileNames: (chunk) => {
-					console.log(chunk);
           if (/css$/.test(chunk.name)) {
             return chunk.name;
           }

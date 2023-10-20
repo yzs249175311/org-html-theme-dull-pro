@@ -1,13 +1,5 @@
 import styles from "./TextTableOfContents.module.scss";
-import {
-  useState,
-  useCallback,
-  useMemo,
-  useRef,
-  HTMLAttributes,
-  Fragment,
-  useEffect,
-} from "react";
+import { useState, useMemo, useRef, Fragment } from "react";
 import { useAppDispatch } from "@/store/store";
 import { useSelector } from "react-redux";
 import { selectHref } from "@/store/navigator/navigator.selector";
@@ -31,7 +23,6 @@ import {
 import { todoColorConstants } from "@/utils/constants.util";
 import { setHref, setHrefDebounce } from "@/store/navigator/navigator.reducer";
 import ExpandLessRounded from "@mui/icons-material/ExpandLessRounded";
-import { VerticalAlignTopRounded } from "@mui/icons-material";
 
 //li
 export const renderLi = withMatcher("li", function (vDom, render) {
@@ -88,6 +79,7 @@ export const renderLi = withMatcher("li", function (vDom, render) {
         <Chip
           label={childElementCount}
           color="primary"
+          variant="outlined"
           onClick={() => {
             setOpen(!open);
           }}
@@ -147,10 +139,6 @@ export const renderUl = withMatcher("ul", function (vDom, render) {
   );
 });
 
-let chipColor = {
-  TODO: "error",
-  DONE: "success",
-};
 //a
 
 function isTodo(dom: VirtualNode) {
@@ -175,12 +163,14 @@ export const renderA = withMatcher("a", function (vDom, render) {
   return (
     <Badge
       key={vDom.uid}
+      className="w-full"
       badgeContent={
         todoValue ? (
           <Chip
             label={todoValue}
             color={Reflect.get(todoColorConstants, todoValue) || "primary"}
             variant="outlined"
+            size="small"
             sx={{ fontSize: "12px" }}
           ></Chip>
         ) : (

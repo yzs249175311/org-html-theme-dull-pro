@@ -3,12 +3,17 @@ import Footnotes from "@/components/Footnotes.component";
 import MainContent from "@/components/MainContent.component";
 import Postamble from "@/components/Postamble.component";
 import Grid from "@mui/material/Grid";
+import "highlight.js/styles/atom-one-dark-reasonable.css";
 /* import './App.scss' */
 
 function App() {
   return (
     <>
-		  <Grid container sx={{ height: "100vh" }} className="h-screen overflow-hidden">
+      <Grid
+        container
+        sx={{ height: "100vh" }}
+        className="h-screen overflow-hidden"
+      >
         <Grid item xs={3}>
           <Navigation />
         </Grid>

@@ -46,7 +46,7 @@ const Navigation: React.FC = () => {
       className={`w-full shrink-0 h-screen overflow-x-hidden overflow-y-auto ${styles.scrollBar} scroll-smooth`}
     >
       <motion.h2
-        className="truncate overflow-hidden p-4 text-3xl text-center sticky top-0 w-full rad-shadow bg-cus-face-1"
+        className="truncate overflow-hidden p-4 text-3xl text-center sticky top-0 w-full bg-cus-face-1 z-20"
         initial={itemVariants.initial}
         variants={itemVariants}
       >

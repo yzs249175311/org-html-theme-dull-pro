@@ -9,8 +9,7 @@ import {
 import { motion } from "framer-motion";
 import { createVariantsFromPostion } from "@/utils/animtes.util";
 import OutlineCountainer from "./OutlineContainer/OutlineCountainer.component";
-
-const render = combineRender([], renderDefault);
+import styles from "./MainContent.module.scss";
 
 const mainAnimate = createVariantsFromPostion("x", "100%", {
   delay: 1,
@@ -29,7 +28,7 @@ const MainContent: React.FC = () => {
     <motion.div
       initial={mainAnimate.initial}
       animate={mainAnimate.show}
-      className="main-content px-12 h-screen overflow-x-hidden overflow-y-auto scroll-smooth"
+      className={`${styles.main} main-content px-12 h-screen overflow-x-hidden overflow-y-auto scroll-smooth`}
     >
       {vContainers.map((vDom) => (
         <OutlineCountainer key={vDom.uid} vDom={vDom}></OutlineCountainer>
