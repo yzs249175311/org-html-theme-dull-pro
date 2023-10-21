@@ -10,10 +10,10 @@ const root = document.createElement("div") as HTMLDivElement;
 root.className = "root";
 document.body.insertAdjacentElement("afterbegin", root);
 
-if (window.matchMedia("(prefers-color-scheme: dark)")){
-	document.body.dataset["theme"] = "dark";
-}else{
-	document.body.dataset["theme"] = "light";
+if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  document.body.dataset["theme"] = "dark";
+} else {
+  document.body.dataset["theme"] = "light";
 }
 
 ReactDOM.createRoot(root).render(

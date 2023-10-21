@@ -1,5 +1,9 @@
 .main {
   &:global() {
+		a {
+			text-decoration: underline var(--brand-color);
+		}
+
     p {
       margin-bottom: 1rem;
     }

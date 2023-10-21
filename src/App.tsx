@@ -3,8 +3,8 @@ import Footnotes from "@/components/Footnotes.component";
 import MainContent from "@/components/MainContent.component";
 import Postamble from "@/components/Postamble.component";
 import Grid from "@mui/material/Grid";
-import "highlight.js/styles/atom-one-dark-reasonable.css";
 /* import './App.scss' */
+
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
         </Grid>
       </Grid>
 
-      <Footnotes className="hidden" />
+		  <Footnotes className="hidden" />
       <Postamble className="hidden" />
     </>
   );

@@ -69,6 +69,20 @@ content:
 
 #+end_src
 
+#+begin_src conf
+
+  [colors]
+  ; background = #282a2e
+  background = #00000000
+  background-alt = #373b41
+  foreground = #c5c8c6
+  primary = #f0c674
+  secondary = #8abeb7
+  alert = #a54242
+  disabled = #707880
+
+#+end_src
+
 quote:
 #+begin_quote
   quote

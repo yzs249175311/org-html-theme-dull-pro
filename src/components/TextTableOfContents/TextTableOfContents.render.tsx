@@ -133,14 +133,18 @@ export const renderLi = withMatcher("li", function (vDom, render) {
 //ul
 export const renderUl = withMatcher("ul", function (vDom, render) {
   return (
-    <List dense key={vDom.uid} {...(vDom.attributes as any)}>
+    <List
+      dense
+      key={vDom.uid}
+      {...(vDom.attributes as any)}
+      style={{ padding: 0 }}
+    >
       {vDom.children.map((child) => render(child))}
     </List>
   );
 });
 
 //a
-
 function isTodo(dom: VirtualNode) {
   let res = dom.attributes.className?.split(" ");
   return (
@@ -184,7 +188,7 @@ export const renderA = withMatcher("a", function (vDom, render) {
     >
       <span
         {...(vDom.attributes as any)}
-        className="w-full truncate text-current"
+        className="w-full truncate text-current flex"
       >
         {vDom.children
           .filter((child) => !isTodo(child))
@@ -194,7 +198,37 @@ export const renderA = withMatcher("a", function (vDom, render) {
   );
 });
 
+const renderTag = withMatcher(
+  (dom) =>
+    dom.tag === "span" &&
+    !!dom.attributes?.className?.split(" ").includes("tag"),
+  function (dom, _) {
+    return (
+      <span
+        key={dom.uid}
+        {...(dom.attributes as any)}
+        style={{ marginLeft: "auto" }}
+      >
+        {dom.children
+          .filter((dom) => dom.nodeType === 1)
+          .map((dom) => {
+            return (
+              <Chip
+                label={
+                  dom.children.filter((dom) => dom.nodeType === 3)[0]?.nodeValue
+                }
+                color="info"
+                variant="outlined"
+                size="small"
+              ></Chip>
+            );
+          })}
+      </span>
+    );
+  },
+);
+
 export const render = combineRender(
-  [renderLi, renderUl, renderA],
+  [renderLi, renderUl, renderA, renderTag],
   renderDefault,
 );

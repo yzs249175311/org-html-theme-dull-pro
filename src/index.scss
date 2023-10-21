@@ -3,14 +3,15 @@
 @tailwind utilities;
 
 :root {
-	font-family: sans-serif,monospace;
-  font-size: 2svh;
+  font-family: sans-serif, monospace;
+  font-size: 1.5svh;
   --brand-hue: 200;
   --brand-saturation: 100%;
   --brand-lightness: 50%;
 }
 
 [data-theme="light"] {
+  @import "./assets/atom-one-light.min.scss";
   color-scheme: light;
   --brand-color-light: hsl(
     var(--brand-hue) var(--brand-saturation) var(--brand-lightness)
@@ -43,6 +44,7 @@
 }
 
 [data-theme="dark"] {
+  @import "./assets/atom-one-dark.min.scss";
   color-scheme: dark;
   --brand-color: hsl(
     var(--brand-hue) calc(var(--brand-saturation) / 2)
