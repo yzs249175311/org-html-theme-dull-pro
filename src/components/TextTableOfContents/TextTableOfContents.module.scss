@@ -3,23 +3,23 @@
 }
 
 .nav-list {
-	&:active {
-		transform: scaleX(1.01);
-	}
+  &:active {
+    transform: scaleX(1.01);
+  }
 
-	:global(span){
-		&:hover{
-			color:var(--text-face-1);
-		}
-	}
+  :global(span) {
+    &:hover {
+      color: var(--text-face-1);
+    }
+  }
   &:global(:has(+ * .Mui-selected)) {
-    span {
+    & > span {
       color: var(--brand-color);
     }
   }
 
   &:global(.Mui-selected) {
-    &>span {
+    & > span {
       color: var(--brand-color);
     }
   }

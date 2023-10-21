@@ -14,7 +14,7 @@ function App() {
         sx={{ height: "100vh" }}
         className="h-screen overflow-hidden"
       >
-        <Grid item xs={3}>
+        <Grid item xs={3} className="shadow-lg">
           <Navigation />
         </Grid>
         <Grid item xs={9}>

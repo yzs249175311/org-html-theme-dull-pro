@@ -1,0 +1,1059 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-10-21 六 10:31 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>hello world</title>
+<meta name="author" content="yzs" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">hello world</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgfc433ae">1. 一级标题</a>
+<ul>
+<li><a href="#org38c8ccd">1.1. 二级标题 1&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">你好</span>&#xa0;<span class="__">世界</span>&#xa0;<span class="___">冒险岛</span>&#xa0;<span class="_______">还是觉得你最好</span></span></a>
+<ul>
+<li><a href="#org4584e9c">1.1.1. 三级标题</a></li>
+</ul>
+</li>
+<li><a href="#orgbd1c2f2">1.2. 二级标题 二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 22&#xa0;&#xa0;&#xa0;<span class="tag"><span class="asdf">asdf</span>&#xa0;<span class="adf">adf</span>&#xa0;<span class="__">你好</span></span></a>
+<ul>
+<li><a href="#orgac2ce29">1.2.1. 三级标题</a></li>
+<li><a href="#org408a324">1.2.2. <span class="todo TODO">TODO</span> 三级标题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hello">hello</span>&#xa0;<span class="world">world</span></span></a></li>
+<li><a href="#org6098cf2">1.2.3. <span class="done DONE">DONE</span> 三级标题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hello">hello</span>&#xa0;<span class="world">world</span></span></a></li>
+<li><a href="#orgcb13e90">1.2.4. <span class="done DONE">DONE</span> this is my task</a></li>
+<li><a href="#org217013d">1.2.5. <span class="todo TODO">TODO</span> this is my task</a></li>
+</ul>
+</li>
+<li><a href="#orgb7202c5">1.3. footnote test</a></li>
+</ul>
+</li>
+<li><a href="#org36ac787">2. 一级标题2</a>
+<ul>
+<li><a href="#orgf66890d">2.1. 二级标题 1&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">你好</span>&#xa0;<span class="__">世界</span>&#xa0;<span class="___">冒险岛</span>&#xa0;<span class="_______">还是觉得你最好</span></span></a></li>
+<li><a href="#org0e5156b">2.2. footnote test 2</a></li>
+<li><a href="#orgcb5f0d8">2.3. 二级标题 二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 22</a>
+<ul>
+<li><a href="#orga5485f0">2.3.1. 三级标题</a></li>
+<li><a href="#org0a394bd">2.3.2. <span class="todo TODO">TODO</span> 三级标题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hello">hello</span>&#xa0;<span class="world">world</span></span></a></li>
+<li><a href="#org9262e64">2.3.3. <span class="done DONE">DONE</span> 三级标题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hello">hello</span>&#xa0;<span class="world">world</span></span></a></li>
+<li><a href="#org93d0577">2.3.4. <span class="done DONE">DONE</span> this is my task</a></li>
+<li><a href="#org2787357">2.3.5. <span class="todo TODO">TODO</span> this is my task</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org1c4e654">3. 读书目录</a>
+<ul>
+<li><a href="#org4f215ae">3.1. 2022年</a>
+<ul>
+<li><a href="#orgc8d4618">3.1.1. 第一轮 <code>[3/9]</code></a></li>
+</ul>
+</li>
+<li><a href="#org4ab3041">3.2. <span class="todo TODO">TODO</span> 《模型思维》 - 斯科特•佩奇</a></li>
+<li><a href="#org5b86cf4">3.3. <span class="todo TODO">TODO</span> 《思考，快与慢》- 丹尼尔·卡尼曼</a></li>
+<li><a href="#org15c83a2">3.4. <span class="todo TODO">TODO</span> 《万能金钥》- 查尔斯•哈尼尔&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></a></li>
+<li><a href="#orgc6be1f5">3.5. <span class="todo TODO">TODO</span> 《当下的力量》 - 埃克哈特•托利&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></a></li>
+<li><a href="#org8ce8c8e">3.6. <span class="todo TODO">TODO</span> 《反脆弱》&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></a></li>
+<li><a href="#org6b75910">3.7. <span class="todo TODO">TODO</span> 《刻意练习》&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></a></li>
+<li><a href="#org1cb30b5">3.8. <span class="todo TODO">TODO</span> 关于爱情 <code>[0/6]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">爱情</span>&#xa0;<span class="__">小说</span></span></a></li>
+<li><a href="#orgd6859d0">3.9. <span class="todo TODO">TODO</span> 《哲学的慰藉》 - 阿兰·德波顿&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">哲学</span></span></a></li>
+<li><a href="#org8686398">3.10. <span class="todo TODO">TODO</span> 《包法利夫人》 - 居斯塔夫·福楼拜&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></a></li>
+<li><a href="#org1ada898">3.11. <span class="todo TODO">TODO</span> 《红与黑》 - 司汤达</a></li>
+<li><a href="#orge3a1c3e">3.12. <span class="todo TODO">TODO</span> 《哲学能做什么》 - 加里·古廷</a></li>
+<li><a href="#orgbfe9bb8">3.13. <span class="todo TODO">TODO</span> 《沉思录》</a></li>
+<li><a href="#orgd269d43">3.14. <span class="todo TODO">TODO</span> 《追忆似水年华》</a></li>
+<li><a href="#org65f1d1a">3.15. <span class="todo TODO">TODO</span> 《人间喜剧》 - 巴尔扎克</a></li>
+<li><a href="#orga42582b">3.16. <span class="todo TODO">TODO</span> 《瓦尔登湖》 - 卢梭</a></li>
+<li><a href="#org937228e">3.17. <span class="todo TODO">TODO</span> 《非暴力沟通》 - 马歇尔·卢森堡</a></li>
+<li><a href="#org2ba2732">3.18. <span class="todo TODO">TODO</span> 《堂吉诃德》</a></li>
+<li><a href="#org1443957">3.19. <span class="todo TODO">TODO</span> 《西西弗神话》</a></li>
+<li><a href="#org816bf8a">3.20. <span class="todo TODO">TODO</span> 《神曲》</a></li>
+</ul>
+</li>
+<li><a href="#org2498352">4. 已读</a>
+<ul>
+<li><a href="#org3d04115">4.1. <span class="done DONE">DONE</span> 《当尼采哭泣》 - 欧文·亚隆&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">哲学</span>&#xa0;<span class="___">心理学</span></span></a></li>
+<li><a href="#org329526a">4.2. <span class="done DONE">DONE</span> 《图解HTTP》- 上野宣、于均良</a></li>
+<li><a href="#org8a840af">4.3. <span class="done DONE">DONE</span> 《百年孤独》 - 加西亚•马尔克斯&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></a></li>
+<li><a href="#org3c90438">4.4. <span class="done DONE">DONE</span> 《1984》 - 乔治·奥威尔&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></a></li>
+<li><a href="#orgd8f5e67">4.5. <span class="done DONE">DONE</span> 《刀锋》 - 威廉·萨默赛特·毛姆&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></a></li>
+<li><a href="#org1e87163">4.6. <span class="done DONE">DONE</span> 《月亮与六便士》 - 威廉·萨默赛特·毛姆&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></a></li>
+<li><a href="#org029bf26">4.7. <span class="done DONE">DONE</span> 《十分钟冥想》&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgfc433ae" class="outline-2">
+<h2 id="orgfc433ae"><span class="section-number-2">1.</span> 一级标题</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+bold: <b>bold</b>
+italic: <i>italic</i>
+underlined: <span class="underline">underlined</span>
+verbatim: <code>verbatim</code>
+code: <code>code</code>
+strike-through: <del>strike-through</del>
+</p>
+
+<ul class="org-ul">
+<li>无序列表
+<ul class="org-ul">
+<li>无序列表
+<ul class="org-ul">
+<li>无序列表
+<ol class="org-ol">
+<li>有序列表
+文件链接: <a href="readme.md">readme</a></li>
+<li>有序列表
+网页链接:<a href="http://www.baidu.com">百度</a></li>
+<li>有序列表</li>
+<li>有序列表</li>
+</ol></li>
+</ul></li>
+<li><p>
+无序列表
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">thead</th>
+<th scope="col" class="org-left">thead</th>
+<th scope="col" class="org-left">thead</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">cell</td>
+<td class="org-left">cell</td>
+<td class="org-left">cell</td>
+</tr>
+
+<tr>
+<td class="org-left">中文</td>
+<td class="org-left">中文</td>
+<td class="org-left">cell</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table></li>
+</ul></li>
+</ul>
+
+
+<ol class="org-ol">
+<li>有序列表
+<ol class="org-ol">
+<li>有序列表
+<ul class="org-ul">
+<li>无序列表
+<ul class="org-ul">
+<li>无序列表</li>
+</ul></li>
+<li>无序列表</li>
+</ul></li>
+<li>有序列表</li>
+<li>有序列表</li>
+</ol></li>
+</ol>
+</div>
+
+<div id="outline-container-org38c8ccd" class="outline-3">
+<h3 id="org38c8ccd"><span class="section-number-3">1.1.</span> 二级标题 1&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">你好</span>&#xa0;<span class="__">世界</span>&#xa0;<span class="___">冒险岛</span>&#xa0;<span class="_______">还是觉得你最好</span></span></h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-org4584e9c" class="outline-4">
+<h4 id="org4584e9c"><span class="section-number-4">1.1.1.</span> 三级标题</h4>
+<div class="outline-text-4" id="text-1-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org12b6f30"></a>四级标题<br />
+<div class="outline-text-5" id="text-1-1-1-1">
+<p>
+content:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-js">
+<span style="color: #C594C5;">let</span> <span style="color: #F99157;">name</span> = <span style="color: #99C794;">"hello world"</span>
+
+<span style="color: #C594C5;">function</span> <span style="color: #6699CC;">greeting</span><span style="color: #6699CC;">()</span> <span style="color: #6699CC;">{</span>
+    console.log<span style="color: #E27E8D;">(</span><span style="color: #99C794;">"hello world"</span><span style="color: #E27E8D;">)</span>
+<span style="color: #6699CC;">}</span>
+
+<span style="color: #C594C5;">class</span> Bird <span style="color: #6699CC;">{</span>
+    value
+    #value
+
+    <span style="color: #C594C5;">function</span> <span style="color: #6699CC;">sing</span><span style="color: #E27E8D;">()</span> <span style="color: #E27E8D;">{</span>
+        console.log<span style="color: #99C794;">(</span><span style="color: #99C794;">"hello world"</span><span style="color: #99C794;">)</span>
+        console.log<span style="color: #99C794;">(</span><span style="color: #99C794;">"long long long long long long long long long long long long long long long long long long long long long long long long line."</span><span style="color: #99C794;">)</span>
+    <span style="color: #E27E8D;">}</span>
+<span style="color: #6699CC;">}</span>
+
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-conf">
+[<span style="color: #FAC863;">colors</span>]
+<span style="color: #F99157;">; background</span> = <span style="color: #65737E;">#</span><span style="color: #65737E;">282a2e</span>
+<span style="color: #F99157;">background</span> = <span style="color: #65737E;">#</span><span style="color: #65737E;">00000000</span>
+<span style="color: #F99157;">background-alt</span> = <span style="color: #65737E;">#</span><span style="color: #65737E;">373b41</span>
+<span style="color: #F99157;">foreground</span> = <span style="color: #65737E;">#</span><span style="color: #65737E;">c5c8c6</span>
+<span style="color: #F99157;">primary</span> = <span style="color: #65737E;">#</span><span style="color: #65737E;">f0c674</span>
+<span style="color: #F99157;">secondary</span> = <span style="color: #65737E;">#</span><span style="color: #65737E;">8abeb7</span>
+<span style="color: #F99157;">alert</span> = <span style="color: #65737E;">#</span><span style="color: #65737E;">a54242</span>
+<span style="color: #F99157;">disabled</span> = <span style="color: #65737E;">#</span><span style="color: #65737E;">707880</span>
+
+</pre>
+</div>
+
+<p>
+quote:
+</p>
+<blockquote>
+<p>
+  quote
+  quote
+  quote
+  quote
+<img src="./public/image.jpg" alt="image.jpg" />
+long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.
+</p>
+</blockquote>
+
+<p>
+verse:
+</p>
+
+<p class="verse">
+&#xa0;Great clouds overhead<br />
+&#xa0;Tiny black birds rise and fall<br />
+&#xa0;Snow covers Emacs<br />
+<br />
+&#xa0;&#xa0;&#xa0;&#xa0;&#x2014;AlexSchroeder<br />
+<br />
+<img src="./public/image.jpg" alt="image.jpg" /><br />
+<br />
+long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.<br />
+</p>
+
+<p>
+center:
+</p>
+<div class="org-center">
+<p>
+Everything should be made as simple as possible, <br />
+but not any simpler
+</p>
+
+
+<p>
+long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.
+</p>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgbd1c2f2" class="outline-3">
+<h3 id="orgbd1c2f2"><span class="section-number-3">1.2.</span> 二级标题 二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 22&#xa0;&#xa0;&#xa0;<span class="tag"><span class="asdf">asdf</span>&#xa0;<span class="adf">adf</span>&#xa0;<span class="__">你好</span></span></h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-orgac2ce29" class="outline-4">
+<h4 id="orgac2ce29"><span class="section-number-4">1.2.1.</span> 三级标题</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<ol class="org-ol">
+<li>有序列表
+<ol class="org-ol">
+<li>有序列表
+<ol class="org-ol">
+<li>有序列表</li>
+</ol></li>
+<li>有序列表</li>
+<li>有有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表有序列表序列表</li>
+</ol></li>
+</ol>
+
+
+<div class="org-src-container">
+<pre class="src src-bash">&#20195;&#30721;&#22359;
+&#20195;&#30721;&#22359;
+&#20195;&#30721;&#22359;
+&#20195;&#30721;&#22359;
+</pre>
+</div>
+
+
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #C594C5;">case</span> $<span style="color: #F99157;">1</span><span style="color: #C594C5;"> in</span>
+    <span style="color: #99C794;">"up"</span>)
+        pactl set-sink-volume @DEFAULT_SINK@ +5% ;;
+    <span style="color: #99C794;">"down"</span>)
+        pactl set-sink-volume @DEFAULT_SINK@ -5% ;;
+    <span style="color: #99C794;">"mute"</span>)
+        pactl set-sink-mute @DEFAULT_SINK@ toggle
+<span style="color: #C594C5;">esac</span>
+
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-js">
+<span style="color: #C594C5;">let</span> <span style="color: #F99157;">name</span> = <span style="color: #99C794;">"hello world"</span>
+
+<span style="color: #C594C5;">function</span> <span style="color: #6699CC;">greeting</span><span style="color: #6699CC;">()</span> <span style="color: #6699CC;">{</span>
+    console.log<span style="color: #E27E8D;">(</span><span style="color: #99C794;">"hello world"</span><span style="color: #E27E8D;">)</span>
+<span style="color: #6699CC;">}</span>
+
+<span style="color: #C594C5;">class</span> Bird <span style="color: #6699CC;">{</span>
+    value
+    #value
+
+    <span style="color: #C594C5;">function</span> <span style="color: #6699CC;">sing</span><span style="color: #E27E8D;">()</span> <span style="color: #E27E8D;">{</span>
+        console.log<span style="color: #99C794;">(</span><span style="color: #99C794;">"hello world"</span><span style="color: #99C794;">)</span>
+    <span style="color: #E27E8D;">}</span>
+<span style="color: #6699CC;">}</span>
+
+</pre>
+</div>
+
+
+<pre class="example" id="org2e72eae">
+example
+example
+example
+example
+
+long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.
+</pre>
+
+<p>
+quote:
+</p>
+<blockquote>
+<p>
+quote
+quote
+quote
+quote
+</p>
+
+<p>
+// 注释
+</p>
+
+
+<div id="org2fe5816" class="figure">
+<p><img src="./public/image.jpg" alt="image.jpg" />
+</p>
+</div>
+
+<p>
+long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.
+</p>
+</blockquote>
+
+<p>
+verse:
+</p>
+
+<p class="verse">
+&#xa0;Great clouds overhead<br />
+&#xa0;Tiny black birds rise and fall<br />
+&#xa0;Snow covers Emacs<br />
+<br />
+&#xa0;&#xa0;&#xa0;&#xa0;&#x2014;AlexSchroeder<br />
+<br />
+<img src="./public/image.jpg" alt="image.jpg" /><br />
+<br />
+long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.<br />
+</p>
+
+<p>
+center:
+</p>
+<div class="org-center">
+<p>
+Everything should be made as simple as possible, <br />
+but not any simpler
+</p>
+
+
+<p>
+long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.long line.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org408a324" class="outline-4">
+<h4 id="org408a324"><span class="section-number-4">1.2.2.</span> <span class="todo TODO">TODO</span> 三级标题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hello">hello</span>&#xa0;<span class="world">world</span></span></h4>
+</div>
+<div id="outline-container-org6098cf2" class="outline-4">
+<h4 id="org6098cf2"><span class="section-number-4">1.2.3.</span> <span class="done DONE">DONE</span> 三级标题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hello">hello</span>&#xa0;<span class="world">world</span></span></h4>
+<div class="outline-text-4" id="text-1-2-3">
+<ul class="org-ul">
+<li class="trans"><code>[-]</code> task 1 <code>[60%]</code>
+<ul class="org-ul">
+<li class="on"><code>[X]</code> task 1.1</li>
+<li class="off"><code>[&#xa0;]</code> task 1.2</li>
+<li class="off"><code>[&#xa0;]</code> task 1.2</li>
+<li class="on"><code>[X]</code> task 1.2</li>
+<li class="on"><code>[X]</code> task 1.2</li>
+</ul></li>
+</ul>
+
+
+<ol class="org-ol">
+<li class="trans"><code>[-]</code> task 1 <code>[2/5]</code>
+<ol class="org-ol">
+<li class="on"><code>[X]</code> task 1.1</li>
+<li class="off"><code>[&#xa0;]</code> task 1.2</li>
+<li class="on"><code>[X]</code> task 1.3</li>
+<li class="off"><code>[&#xa0;]</code> task 1.4</li>
+<li class="off"><code>[&#xa0;]</code> task 1.5</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgcb13e90" class="outline-4">
+<h4 id="orgcb13e90"><span class="section-number-4">1.2.4.</span> <span class="done DONE">DONE</span> this is my task</h4>
+<div class="outline-text-4" id="text-1-2-4">
+</div>
+</div>
+
+<div id="outline-container-org217013d" class="outline-4">
+<h4 id="org217013d"><span class="section-number-4">1.2.5.</span> <span class="todo TODO">TODO</span> this is my task</h4>
+<div class="outline-text-4" id="text-1-2-5">
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-orgb7202c5" class="outline-3">
+<h3 id="orgb7202c5"><span class="section-number-3">1.3.</span> footnote test</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>Footnote one: name<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup></li>
+<li>Footnote two: anonymous<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup></li>
+<li>Footnote three: name and definition<sup><a id="fnr.3" class="footref" href="#fn.3" role="doc-backlink">3</a></sup></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org36ac787" class="outline-2">
+<h2 id="org36ac787"><span class="section-number-2">2.</span> 一级标题2</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+bold: <b>bold</b>
+italic: <i>italic</i>
+underlined: <span class="underline">underlined</span>
+verbatim: <code>verbatim</code>
+code: <code>code</code>
+strike-through: <del>strike-through</del>
+</p>
+
+
+<ul class="org-ul">
+<li>无序列表
+<ul class="org-ul">
+<li>无序列表
+<ul class="org-ul">
+<li>无序列表
+<ol class="org-ol">
+<li>有序列表</li>
+<li>有序列表</li>
+<li>有序列表</li>
+<li>有序列表</li>
+</ol></li>
+</ul></li>
+<li><p>
+无序列表
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">thead</th>
+<th scope="col" class="org-left">thead</th>
+<th scope="col" class="org-left">thead</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">cell</td>
+<td class="org-left">cell</td>
+<td class="org-left">cell</td>
+</tr>
+
+<tr>
+<td class="org-left">中文</td>
+<td class="org-left">中文</td>
+<td class="org-left">cell</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table></li>
+</ul></li>
+</ul>
+
+
+<ol class="org-ol">
+<li>有序列表
+<ol class="org-ol">
+<li>有序列表
+<ul class="org-ul">
+<li>无序列表
+<ul class="org-ul">
+<li>无序列表</li>
+</ul></li>
+<li>无序列表</li>
+</ul></li>
+<li>有序列表</li>
+<li>有序列表</li>
+</ol></li>
+</ol>
+</div>
+
+<div id="outline-container-orgf66890d" class="outline-3">
+<h3 id="orgf66890d"><span class="section-number-3">2.1.</span> 二级标题 1&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">你好</span>&#xa0;<span class="__">世界</span>&#xa0;<span class="___">冒险岛</span>&#xa0;<span class="_______">还是觉得你最好</span></span></h3>
+</div>
+
+<div id="outline-container-org0e5156b" class="outline-3">
+<h3 id="org0e5156b"><span class="section-number-3">2.2.</span> footnote test 2</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Footnote two one: anonymous<sup><a id="fnr.3.100" class="footref" href="#fn.3" role="doc-backlink">3</a></sup></li>
+<li>Footnote two one: anonymous<sup><a id="fnr.4" class="footref" href="#fn.4" role="doc-backlink">4</a></sup></li>
+<li>Footnote two two: name and definition<sup><a id="fnr.5" class="footref" href="#fn.5" role="doc-backlink">5</a></sup></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgcb5f0d8" class="outline-3">
+<h3 id="orgcb5f0d8"><span class="section-number-3">2.3.</span> 二级标题 二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 22</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-orga5485f0" class="outline-4">
+<h4 id="orga5485f0"><span class="section-number-4">2.3.1.</span> 三级标题</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<ol class="org-ol">
+<li>有序列表
+<ol class="org-ol">
+<li>有序列表
+<ol class="org-ol">
+<li>有序列表</li>
+</ol></li>
+<li>有序列表</li>
+<li><p>
+有序列表
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">&#20195;&#30721;&#22359;
+&#20195;&#30721;&#22359;
+&#20195;&#30721;&#22359;
+&#20195;&#30721;&#22359;
+</pre>
+</div></li>
+</ol></li>
+</ol>
+
+<pre class="example" id="org3e8b466">
+
+example
+example
+example
+example
+
+</pre>
+
+<blockquote>
+<p>
+quote
+quote
+quote
+quote
+quote
+</p>
+</blockquote>
+</div>
+</div>
+
+
+<div id="outline-container-org0a394bd" class="outline-4">
+<h4 id="org0a394bd"><span class="section-number-4">2.3.2.</span> <span class="todo TODO">TODO</span> 三级标题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hello">hello</span>&#xa0;<span class="world">world</span></span></h4>
+</div>
+<div id="outline-container-org9262e64" class="outline-4">
+<h4 id="org9262e64"><span class="section-number-4">2.3.3.</span> <span class="done DONE">DONE</span> 三级标题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hello">hello</span>&#xa0;<span class="world">world</span></span></h4>
+<div class="outline-text-4" id="text-2-3-3">
+<ul class="org-ul">
+<li class="trans"><code>[-]</code> task 1 <code>[60%]</code>
+<ul class="org-ul">
+<li class="on"><code>[X]</code> task 1.1</li>
+<li class="off"><code>[&#xa0;]</code> task 1.2</li>
+<li class="off"><code>[&#xa0;]</code> task 1.2</li>
+<li class="on"><code>[X]</code> task 1.2</li>
+<li class="on"><code>[X]</code> task 1.2</li>
+</ul></li>
+</ul>
+
+
+<ol class="org-ol">
+<li class="trans"><code>[-]</code> task 1 <code>[2/5]</code>
+<ol class="org-ol">
+<li class="on"><code>[X]</code> task 1.1</li>
+<li class="off"><code>[&#xa0;]</code> task 1.2</li>
+<li class="on"><code>[X]</code> task 1.3</li>
+<li class="off"><code>[&#xa0;]</code> task 1.4</li>
+<li class="off"><code>[&#xa0;]</code> task 1.5</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org93d0577" class="outline-4">
+<h4 id="org93d0577"><span class="section-number-4">2.3.4.</span> <span class="done DONE">DONE</span> this is my task</h4>
+<div class="outline-text-4" id="text-2-3-4">
+</div>
+</div>
+
+<div id="outline-container-org2787357" class="outline-4">
+<h4 id="org2787357"><span class="section-number-4">2.3.5.</span> <span class="todo TODO">TODO</span> this is my task</h4>
+<div class="outline-text-4" id="text-2-3-5">
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1c4e654" class="outline-2">
+<h2 id="org1c4e654"><span class="section-number-2">3.</span> 读书目录</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org4f215ae" class="outline-3">
+<h3 id="org4f215ae"><span class="section-number-3">3.1.</span> 2022年</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orgc8d4618" class="outline-4">
+<h4 id="orgc8d4618"><span class="section-number-4">3.1.1.</span> 第一轮 <code>[3/9]</code></h4>
+<div class="outline-text-4" id="text-3-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org9c16f02"></a><span class="done DONE">DONE</span> 《苏菲的世界》 - 乔斯坦·贾德&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">哲学</span>&#xa0;<span class="__">小说</span></span><br />
+<div class="outline-text-5" id="text-3-1-1-1">
+</div>
+</li>
+<li><a id="orgcddb378"></a><span class="todo TODO">TODO</span> 《酒吧长谈》 - 马里奥·巴尔加斯·略萨<br /></li>
+<li><a id="org6d970ba"></a><span class="done DONE">DONE</span> 《濒死经验的启示》 - 木内鹤彦<br />
+<div class="outline-text-5" id="text-3-1-1-3">
+</div>
+</li>
+<li><a id="org38bbea7"></a><span class="todo TODO">TODO</span> 《地球编年史》 - 撒迦利亚·西琴<br /></li>
+<li><a id="org44038a6"></a><span class="done DONE">DONE</span> 《前世今生》 - 布莱恩·魏斯&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span><br />
+<div class="outline-text-5" id="text-3-1-1-5">
+</div>
+</li>
+<li><a id="orgbc1de5e"></a><span class="todo TODO">TODO</span> 《中国人的性格》 - 李明良<br /></li>
+<li><a id="org7095cbe"></a><span class="todo TODO">TODO</span> 《跳出头脑，融入生活》- [美] 史蒂文·C.海斯 / [美] 斯宾斯·史密斯&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span><br /></li>
+<li><a id="org137c300"></a><span class="done DONE">DONE</span> 《怪诞行为学》 - 丹‧艾瑞利&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span><br />
+<div class="outline-text-5" id="text-3-1-1-8">
+<ul class="org-ul">
+<li>State "DONE"       from "TODO"       <span class="timestamp-wrapper"><span class="timestamp">[2023-01-31 二 04:37]</span></span></li>
+</ul>
+</div>
+</li>
+<li><a id="org377ae92"></a><span class="todo TODO">TODO</span> 《第二种忠诚》 - 刘宾燕<br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org4ab3041" class="outline-3">
+<h3 id="org4ab3041"><span class="section-number-3">3.2.</span> <span class="todo TODO">TODO</span> 《模型思维》 - 斯科特•佩奇</h3>
+</div>
+<div id="outline-container-org5b86cf4" class="outline-3">
+<h3 id="org5b86cf4"><span class="section-number-3">3.3.</span> <span class="todo TODO">TODO</span> 《思考，快与慢》- 丹尼尔·卡尼曼</h3>
+</div>
+<div id="outline-container-org15c83a2" class="outline-3">
+<h3 id="org15c83a2"><span class="section-number-3">3.4.</span> <span class="todo TODO">TODO</span> 《万能金钥》- 查尔斯•哈尼尔&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></h3>
+</div>
+<div id="outline-container-orgc6be1f5" class="outline-3">
+<h3 id="orgc6be1f5"><span class="section-number-3">3.5.</span> <span class="todo TODO">TODO</span> 《当下的力量》 - 埃克哈特•托利&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></h3>
+</div>
+<div id="outline-container-org8ce8c8e" class="outline-3">
+<h3 id="org8ce8c8e"><span class="section-number-3">3.6.</span> <span class="todo TODO">TODO</span> 《反脆弱》&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></h3>
+</div>
+<div id="outline-container-org6b75910" class="outline-3">
+<h3 id="org6b75910"><span class="section-number-3">3.7.</span> <span class="todo TODO">TODO</span> 《刻意练习》&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></h3>
+</div>
+<div id="outline-container-org1cb30b5" class="outline-3">
+<h3 id="org1cb30b5"><span class="section-number-3">3.8.</span> <span class="todo TODO">TODO</span> 关于爱情 <code>[0/6]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">爱情</span>&#xa0;<span class="__">小说</span></span></h3>
+<div class="outline-text-3" id="text-3-8">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> 《爱的艺术》</li>
+<li class="off"><code>[&#xa0;]</code> 《亲密关系的秘密》</li>
+<li class="off"><code>[&#xa0;]</code> 《如何正确吵架》</li>
+<li class="off"><code>[&#xa0;]</code> 《被讨厌的勇气》</li>
+<li class="off"><code>[&#xa0;]</code> 《男人来自火星女人来自金星》</li>
+<li class="off"><code>[&#xa0;]</code> 《亲密关系》</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd6859d0" class="outline-3">
+<h3 id="orgd6859d0"><span class="section-number-3">3.9.</span> <span class="todo TODO">TODO</span> 《哲学的慰藉》 - 阿兰·德波顿&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">哲学</span></span></h3>
+</div>
+<div id="outline-container-org8686398" class="outline-3">
+<h3 id="org8686398"><span class="section-number-3">3.10.</span> <span class="todo TODO">TODO</span> 《包法利夫人》 - 居斯塔夫·福楼拜&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></h3>
+</div>
+<div id="outline-container-org1ada898" class="outline-3">
+<h3 id="org1ada898"><span class="section-number-3">3.11.</span> <span class="todo TODO">TODO</span> 《红与黑》 - 司汤达</h3>
+</div>
+<div id="outline-container-orge3a1c3e" class="outline-3">
+<h3 id="orge3a1c3e"><span class="section-number-3">3.12.</span> <span class="todo TODO">TODO</span> 《哲学能做什么》 - 加里·古廷</h3>
+</div>
+<div id="outline-container-orgbfe9bb8" class="outline-3">
+<h3 id="orgbfe9bb8"><span class="section-number-3">3.13.</span> <span class="todo TODO">TODO</span> 《沉思录》</h3>
+</div>
+<div id="outline-container-orgd269d43" class="outline-3">
+<h3 id="orgd269d43"><span class="section-number-3">3.14.</span> <span class="todo TODO">TODO</span> 《追忆似水年华》</h3>
+</div>
+<div id="outline-container-org65f1d1a" class="outline-3">
+<h3 id="org65f1d1a"><span class="section-number-3">3.15.</span> <span class="todo TODO">TODO</span> 《人间喜剧》 - 巴尔扎克</h3>
+</div>
+<div id="outline-container-orga42582b" class="outline-3">
+<h3 id="orga42582b"><span class="section-number-3">3.16.</span> <span class="todo TODO">TODO</span> 《瓦尔登湖》 - 卢梭</h3>
+</div>
+<div id="outline-container-org937228e" class="outline-3">
+<h3 id="org937228e"><span class="section-number-3">3.17.</span> <span class="todo TODO">TODO</span> 《非暴力沟通》 - 马歇尔·卢森堡</h3>
+</div>
+<div id="outline-container-org2ba2732" class="outline-3">
+<h3 id="org2ba2732"><span class="section-number-3">3.18.</span> <span class="todo TODO">TODO</span> 《堂吉诃德》</h3>
+</div>
+<div id="outline-container-org1443957" class="outline-3">
+<h3 id="org1443957"><span class="section-number-3">3.19.</span> <span class="todo TODO">TODO</span> 《西西弗神话》</h3>
+</div>
+<div id="outline-container-org816bf8a" class="outline-3">
+<h3 id="org816bf8a"><span class="section-number-3">3.20.</span> <span class="todo TODO">TODO</span> 《神曲》</h3>
+</div>
+</div>
+
+
+<div id="outline-container-org2498352" class="outline-2">
+<h2 id="org2498352"><span class="section-number-2">4.</span> 已读</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org3d04115" class="outline-3">
+<h3 id="org3d04115"><span class="section-number-3">4.1.</span> <span class="done DONE">DONE</span> 《当尼采哭泣》 - 欧文·亚隆&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">哲学</span>&#xa0;<span class="___">心理学</span></span></h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+</div>
+<div id="outline-container-org329526a" class="outline-3">
+<h3 id="org329526a"><span class="section-number-3">4.2.</span> <span class="done DONE">DONE</span> 《图解HTTP》- 上野宣、于均良</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+</div>
+<div id="outline-container-org8a840af" class="outline-3">
+<h3 id="org8a840af"><span class="section-number-3">4.3.</span> <span class="done DONE">DONE</span> 《百年孤独》 - 加西亚•马尔克斯&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+</div>
+<div id="outline-container-org3c90438" class="outline-3">
+<h3 id="org3c90438"><span class="section-number-3">4.4.</span> <span class="done DONE">DONE</span> 《1984》 - 乔治·奥威尔&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></h3>
+<div class="outline-text-3" id="text-4-4">
+</div>
+</div>
+<div id="outline-container-orgd8f5e67" class="outline-3">
+<h3 id="orgd8f5e67"><span class="section-number-3">4.5.</span> <span class="done DONE">DONE</span> 《刀锋》 - 威廉·萨默赛特·毛姆&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></h3>
+<div class="outline-text-3" id="text-4-5">
+</div>
+</div>
+<div id="outline-container-org1e87163" class="outline-3">
+<h3 id="org1e87163"><span class="section-number-3">4.6.</span> <span class="done DONE">DONE</span> 《月亮与六便士》 - 威廉·萨默赛特·毛姆&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></h3>
+<div class="outline-text-3" id="text-4-6">
+</div>
+</div>
+<div id="outline-container-org029bf26" class="outline-3">
+<h3 id="org029bf26"><span class="section-number-3">4.7.</span> <span class="done DONE">DONE</span> 《十分钟冥想》&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></h3>
+<div class="outline-text-3" id="text-4-7">
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+this is first footnote one
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">This is the inline definition of this footnote</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">a definition</p></div></div>
+
+<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4" role="doc-backlink">4</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">2.1 This is the inline definition of this footnote</p></div></div>
+
+<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5" role="doc-backlink">5</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">2.2 a definition</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="date">Date: 2023-02-11 六 00:00</p>
+<p class="author">Author: yzs</p>
+<p class="date">Created: 2023-10-21 六 10:31</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

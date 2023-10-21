@@ -4,6 +4,7 @@ import { useAppDispatch } from "@/store/store";
 import { useSelector } from "react-redux";
 import { selectHref } from "@/store/navigator/navigator.selector";
 import { motion } from "framer-motion";
+import { tagColorMap } from "@/utils/constants.util";
 import {
   VirtualNode,
   withMatcher,
@@ -91,7 +92,7 @@ export const renderLi = withMatcher("li", function (vDom, render) {
   return (
     <Fragment key={vDom.uid}>
       <ListItemButton
-        className={`${styles["nav-list"]} bg-red-500`}
+        className={`${styles["nav-list"]}`}
         ref={selfRef}
         selected={selected}
         {...(vDom.attributes as any)}
@@ -188,7 +189,7 @@ export const renderA = withMatcher("a", function (vDom, render) {
     >
       <span
         {...(vDom.attributes as any)}
-        className="w-full truncate text-current flex"
+        className="w-full truncate text-current"
       >
         {vDom.children
           .filter((child) => !isTodo(child))
@@ -212,12 +213,13 @@ const renderTag = withMatcher(
         {dom.children
           .filter((dom) => dom.nodeType === 1)
           .map((dom) => {
+            const tagText = dom.children.filter((dom) => dom.nodeType === 3)[0]
+              ?.nodeValue;
             return (
               <Chip
-                label={
-                  dom.children.filter((dom) => dom.nodeType === 3)[0]?.nodeValue
-                }
-                color="info"
+								key={dom.uid}
+                label={tagText}
+                color={tagColorMap.get(tagText)}
                 variant="outlined"
                 size="small"
               ></Chip>

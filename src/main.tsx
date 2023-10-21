@@ -4,6 +4,7 @@ import App from "./App.tsx";
 import "./index.scss";
 import { Provider } from "react-redux";
 import { store } from "@/store/store.ts";
+import "./default.scss"
 /* import "fluiditype/fluidtype.css"; */
 
 const root = document.createElement("div") as HTMLDivElement;

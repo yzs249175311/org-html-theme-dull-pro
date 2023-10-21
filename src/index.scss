@@ -13,7 +13,7 @@
 [data-theme="light"] {
   @import "./assets/atom-one-light.min.scss";
   color-scheme: light;
-  --brand-color-light: hsl(
+  --brand-color: hsl(
     var(--brand-hue) var(--brand-saturation) var(--brand-lightness)
   );
   --bg-face-1: hsl(var(--brand-hue) 25% 90%);
@@ -26,6 +26,7 @@
 
   --shadow-face-1: var(--brand-hue) 10% 20%;
   --shadow-strength: 0.02;
+
 
   .rad-shadow {
     box-shadow:

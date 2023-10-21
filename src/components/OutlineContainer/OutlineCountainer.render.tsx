@@ -8,10 +8,13 @@ import React, { Fragment, useEffect, useRef } from "react";
 import { setHref, setHrefDebounce } from "@/store/navigator/navigator.reducer";
 import { useAppDispatch } from "@/store/store";
 import { Tooltip, Zoom } from "@mui/material";
+import CheckBoxOutlineBlankRoundedIcon from "@mui/icons-material/CheckBoxOutlineBlankRounded";
+import IndeterminateCheckBoxRoundedIcon from "@mui/icons-material/IndeterminateCheckBoxRounded";
+import CheckBoxRoundedIcon from "@mui/icons-material/CheckBoxRounded";
 import hljs from "highlight.js";
 
 const classObj = {
-  code: "whitespace-pre p-4 overflow-x-auto rounded-lg my-4 relative",
+  code: "whitespace-pre p-4 overflow-x-auto rounded-lg relative",
 };
 
 //h2
@@ -62,7 +65,7 @@ const renderSrc = withMatcher(
     }, []);
 
     return (
-      <div className="relative" key={dom.uid}>
+      <div className="relative m-4" key={dom.uid}>
         <div className="langType absolute right-0 top-0 bg-cus-face-4 rounded-bl-md uppercase z-10 px-2">
           {lang}
         </div>
@@ -119,7 +122,34 @@ const renderA = withMatcher("a", function (dom, render) {
   );
 });
 
+const renderCheckCode = withMatcher(
+  function (dom) {
+    return (
+      dom.tag === "code" &&
+      !!dom.children[0]?.nodeValue &&
+      /^\[[\s-X]\]$/.test(dom.children[0]!.nodeValue)
+    );
+  },
+  function (dom, render) {
+    function getIcon() {
+      if (dom.children[0].nodeValue === "[X]") {
+        return <CheckBoxRoundedIcon color="success"></CheckBoxRoundedIcon>;
+      } else if (dom.children[0].nodeValue === "[-]") {
+        return (
+          <IndeterminateCheckBoxRoundedIcon color="warning"></IndeterminateCheckBoxRoundedIcon>
+        );
+      } else {
+        return (
+          <CheckBoxOutlineBlankRoundedIcon color="error"></CheckBoxOutlineBlankRoundedIcon>
+        );
+      }
+    }
+
+    return <code key={dom.uid}>{getIcon()}</code>;
+  },
+);
+
 export const render = combineRender(
-  [renderHeading, renderSrc, renderExample, renderA],
+  [renderHeading, renderSrc, renderExample, renderA, renderCheckCode],
   renderDefault,
 );
