@@ -8,6 +8,7 @@ import { selectHref } from "@/store/navigator/navigator.selector";
 import { useSelector } from "react-redux";
 import styles from "./Navigation.module.scss";
 import gsap from "@/gsapConfig";
+import { debounce } from "lodash";
 
 const textTableOfContents = toc.querySelector("#text-table-of-contents")!;
 
@@ -24,6 +25,10 @@ const tocVariants = createVariantsFromPostion("x", "-100%", {
 
 const itemVariants = createVariantsFromPostion("y", "-100%");
 
+const scrollToSelected = debounce(() => {
+  document?.querySelector(".Mui-selected")?.scrollIntoView({ block: "center" });
+}, 1000);
+
 const Navigation: React.FC = () => {
   const [state, _] = useState<keyof typeof tocVariants>("show");
   const [vDom, setVDom] = useState(vTextTableOfContents);
@@ -32,9 +37,7 @@ const Navigation: React.FC = () => {
 
   //目录中的元素滚动到容器中间
   useEffect(() => {
-    selfRef.current
-      ?.querySelector(".Mui-selected")
-      ?.scrollIntoView({ block: "center" });
+    scrollToSelected();
   }, [href]);
 
   return (

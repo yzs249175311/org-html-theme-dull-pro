@@ -1,13 +1,25 @@
 import {
+  VirtualNode,
   combineRender,
+  parseVNodeToJson,
   renderDefault,
   withMatcher,
 } from "@/utils/dom-operation.util";
 import { motion, MotionProps } from "framer-motion";
-import React, { Fragment, useEffect, useRef } from "react";
+import React, { Fragment, useEffect, useMemo, useRef } from "react";
 import { setHref, setHrefDebounce } from "@/store/navigator/navigator.reducer";
 import { useAppDispatch } from "@/store/store";
-import { Tooltip, Zoom } from "@mui/material";
+import {
+  Tooltip,
+  Zoom,
+  TableContainer,
+  Table,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableBody,
+  Paper,
+} from "@mui/material";
 import CheckBoxOutlineBlankRoundedIcon from "@mui/icons-material/CheckBoxOutlineBlankRounded";
 import IndeterminateCheckBoxRoundedIcon from "@mui/icons-material/IndeterminateCheckBoxRounded";
 import CheckBoxRoundedIcon from "@mui/icons-material/CheckBoxRounded";
@@ -65,8 +77,12 @@ const renderSrc = withMatcher(
     }, []);
 
     return (
-      <div className="relative m-4" key={dom.uid}>
-        <div className="langType absolute right-0 top-0 bg-cus-face-4 rounded-bl-md uppercase z-10 px-2">
+      <div
+        className="relative m-4"
+        key={dom.uid}
+        style={{ minWidth: "50%", maxWidth: "100%", width: "fit-content" }}
+      >
+        <div className="langType absolute right-0 top-0 bg-cus-face-4 rounded-bl-md rounded-tr-lg uppercase z-10 px-2">
           {lang}
         </div>
         <div className={`language-${langType} ${classObj.code}`} ref={selfRef}>
@@ -90,8 +106,8 @@ const renderExample = withMatcher(
       hljs.highlightElement(selfRef.current!);
     }, []);
     return (
-      <div className="relative" key={dom.uid}>
-        <div className="langType absolute right-0 top-0 bg-cus-face-3 rounded-bl-md uppercase z-10 px-2">
+      <div className="relative" key={dom.uid} style={{ minWidth: "50%", maxWidth: "100%", width: "fit-content" }}>
+        <div className="langType absolute right-0 top-0 bg-cus-face-3 rounded-bl-lg rounded-tr-lg uppercase z-10 px-2">
           example
         </div>
         <div ref={selfRef} className={`language-plaintext ${classObj.code} `}>
@@ -149,7 +165,88 @@ const renderCheckCode = withMatcher(
   },
 );
 
+const renderTable = withMatcher("table", function (dom, render) {
+  const tableJson = useMemo(() => {
+    return parseVNodeToJson(dom);
+  }, [dom]);
+
+  return (
+    <TableContainer
+      {...(dom.attributes as any)}
+      key={dom.uid}
+      component={Paper}
+      sx={{
+        width: "fit-content",
+        marginY: "1rem",
+      }}
+    >
+      <Table
+        size="small"
+        sx={{
+          backgroundColor: "var(--bg-face-3)",
+        }}
+      >
+        <TableHead
+          sx={{
+            backgroundColor: "var(--bg-face-4)",
+            color: "var(--text-face-1)",
+          }}
+        >
+          {tableJson.head?.map((domList) => {
+            return (
+              <TableRow>
+                {domList.map((dom) => {
+                  return (
+                    <TableCell
+                      key={dom.uid}
+                      sx={{ fontWeight: 700 }}
+                      {...(dom.attributes as any)}
+                    >
+                      {dom.children.map((dom) => render(dom))}
+                    </TableCell>
+                  );
+                })}
+              </TableRow>
+            );
+          })}
+        </TableHead>
+        <TableBody>
+          {tableJson.body?.map((domList, index) => {
+            return (
+              <TableRow
+                key={index}
+                sx={{
+                  "&:last-child td, &:last-child th": { border: 0 },
+                }}
+              >
+                {domList.map((dom) => {
+                  return (
+                    <TableCell
+                      key={dom.uid}
+                      {...(dom.attributes as any)}
+                      sx={{ color: "var(--text-face-1)" }}
+                    >
+                      {dom.children.map((dom) => render(dom))}
+                    </TableCell>
+                  );
+                })}
+              </TableRow>
+            );
+          })}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+});
+
 export const render = combineRender(
-  [renderHeading, renderSrc, renderExample, renderA, renderCheckCode],
+  [
+    renderHeading,
+    renderSrc,
+    renderExample,
+    renderA,
+    renderCheckCode,
+    renderTable,
+  ],
   renderDefault,
 );

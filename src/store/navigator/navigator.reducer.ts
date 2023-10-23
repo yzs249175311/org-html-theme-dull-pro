@@ -16,7 +16,7 @@ export const navigatorSlice = createSlice({
 
 export const setHrefDebounce = (function () {
   let timer: null | NodeJS.Timeout = null;
-  let time: number = 300;
+  let time: number = 0;
   let scrollTime = 1000;
   let isScrolling = false;
   let scrollTimer: null | NodeJS.Timeout = null;

@@ -217,7 +217,7 @@ const renderTag = withMatcher(
               ?.nodeValue;
             return (
               <Chip
-								key={dom.uid}
+                key={dom.uid}
                 label={tagText}
                 color={tagColorMap.get(tagText)}
                 variant="outlined"

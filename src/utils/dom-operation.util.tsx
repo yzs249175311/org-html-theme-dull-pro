@@ -181,3 +181,32 @@ export const renderDefault = withMatcher("default", function (vDom, render) {
       : null,
   );
 });
+
+type TableJson = {
+  head: VirtualNode[][] | null | undefined;
+  body: VirtualNode[][] | null | undefined;
+};
+
+export const parseVNodeToJson = (vDom: VirtualNode): TableJson => {
+  const vHead = vDom.children.find((dom) => dom.tag === "thead");
+  const vBody = vDom.children.find((dom) => dom.tag === "tbody");
+  let head: VirtualNode[][] | undefined | null = null;
+  let body: VirtualNode[][] | undefined | null = null;
+
+  if (!!vHead) {
+    head = vHead.children
+      .filter((dom) => dom.tag === "tr")
+      .map((dom) => dom.children.filter((dom) => dom.tag === "th"));
+  }
+
+  if (!!vBody) {
+    body = vBody.children
+      .filter((dom) => dom.tag === "tr")
+      .map((dom) => dom.children.filter((dom) => dom.tag === "td"));
+  }
+
+  return {
+    head,
+    body,
+  };
+};

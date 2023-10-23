@@ -30,10 +30,15 @@ strike-through: +strike-through+
     | thead | thead | thead |
     |-------+-------+-------|
     | cell  | cell  | cell  |
-    | 中文  | 中文  | cell  |
+    | 中文   | 中文   | cell  |
     |       |       |       |
     |       |       |       |
     |       |       |       |
+
+    |        | thead | thead |
+    |--------+-------+-------|
+    | title1 | cell  | cell  |
+    | title2 | cell  | cell  |
 
 
 1. 有序列表

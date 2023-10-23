@@ -3,196 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-10-21 六 10:49 -->
+<!-- 2023-10-23 一 11:41 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>hello world</title>
 <meta name="author" content="yzs" />
 <meta name="generator" content="Org Mode" />
-<style>
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { }
-</style>
+<link rel="stylesheet" type="text/css" href="https://yzs249175311.github.io/org-html-theme-dull-pro/org-html-theme-dull-pro.css"/>
+<script type="text/javascript" src="https://yzs249175311.github.io/org-html-theme-dull-pro/org-html-theme-dull-pro.js" defer></script>
 </head>
 <body>
 <div id="content" class="content">
@@ -201,86 +19,89 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org69c6bc5">1. 一级标题</a>
+<li><a href="#orgdca7f76">1. 一级标题</a>
 <ul>
-<li><a href="#orgb5bf443">1.1. 二级标题 1&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">你好</span>&#xa0;<span class="__">世界</span>&#xa0;<span class="___">冒险岛</span>&#xa0;<span class="_______">还是觉得你最好</span></span></a>
+<li><a href="#org9795fdb">1.1. 二级标题 1&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">你好</span>&#xa0;<span class="__">世界</span>&#xa0;<span class="___">冒险岛</span>&#xa0;<span class="_______">还是觉得你最好</span></span></a>
 <ul>
-<li><a href="#org6ae8c9c">1.1.1. 三级标题</a></li>
+<li><a href="#org8071d1e">1.1.1. 三级标题</a></li>
 </ul>
 </li>
-<li><a href="#org8a94c2b">1.2. 二级标题 二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 22&#xa0;&#xa0;&#xa0;<span class="tag"><span class="asdf">asdf</span>&#xa0;<span class="adf">adf</span>&#xa0;<span class="__">你好</span></span></a>
+<li><a href="#orgacf4322">1.2. 二级标题 二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 22&#xa0;&#xa0;&#xa0;<span class="tag"><span class="asdf">asdf</span>&#xa0;<span class="adf">adf</span>&#xa0;<span class="__">你好</span></span></a>
 <ul>
-<li><a href="#org25623c4">1.2.1. 三级标题</a></li>
-<li><a href="#org6d809e2">1.2.2. <span class="todo TODO">TODO</span> 三级标题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hello">hello</span>&#xa0;<span class="world">world</span></span></a></li>
-<li><a href="#org31b2d5a">1.2.3. <span class="done DONE">DONE</span> 三级标题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hello">hello</span>&#xa0;<span class="world">world</span></span></a></li>
-<li><a href="#org13c712e">1.2.4. <span class="done DONE">DONE</span> this is my task</a></li>
-<li><a href="#org9726a40">1.2.5. <span class="todo TODO">TODO</span> this is my task</a></li>
+<li><a href="#orgf8afdf8">1.2.1. 三级标题</a></li>
+<li><a href="#orge8afd6b">1.2.2. <span class="todo TODO">TODO</span> 三级标题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hello">hello</span>&#xa0;<span class="world">world</span></span></a></li>
+<li><a href="#org7873f8b">1.2.3. <span class="done DONE">DONE</span> 三级标题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hello">hello</span>&#xa0;<span class="world">world</span></span></a></li>
+<li><a href="#orgd7208d2">1.2.4. <span class="done DONE">DONE</span> this is my task</a></li>
+<li><a href="#org96f1d47">1.2.5. <span class="todo TODO">TODO</span> this is my task</a></li>
 </ul>
 </li>
-<li><a href="#org9e135ff">1.3. footnote test</a></li>
+<li><a href="#orge0faeb3">1.3. footnote test</a></li>
 </ul>
 </li>
-<li><a href="#orgb199fb9">2. 一级标题2</a>
+<li><a href="#org01fa034">2. 一级标题2</a>
 <ul>
-<li><a href="#orgb069619">2.1. 二级标题 1&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">你好</span>&#xa0;<span class="__">世界</span>&#xa0;<span class="___">冒险岛</span>&#xa0;<span class="_______">还是觉得你最好</span></span></a></li>
-<li><a href="#org7f74f91">2.2. footnote test 2</a></li>
-<li><a href="#orgd1c21e1">2.3. 二级标题 二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 22</a>
+<li><a href="#org910c1b5">2.1. 二级标题 1&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">你好</span>&#xa0;<span class="__">世界</span>&#xa0;<span class="___">冒险岛</span>&#xa0;<span class="_______">还是觉得你最好</span></span></a></li>
+<li><a href="#orge53afd6">2.2. footnote test 2</a></li>
+<li><a href="#org9213676">2.3. 二级标题 二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 22</a>
 <ul>
-<li><a href="#org041667b">2.3.1. 三级标题</a></li>
-<li><a href="#org8dcb8fa">2.3.2. <span class="todo TODO">TODO</span> 三级标题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hello">hello</span>&#xa0;<span class="world">world</span></span></a></li>
-<li><a href="#org31eb862">2.3.3. <span class="done DONE">DONE</span> 三级标题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hello">hello</span>&#xa0;<span class="world">world</span></span></a></li>
-<li><a href="#org97dff80">2.3.4. <span class="done DONE">DONE</span> this is my task</a></li>
-<li><a href="#orgd33f779">2.3.5. <span class="todo TODO">TODO</span> this is my task</a></li>
+<li><a href="#org8d4483c">2.3.1. 三级标题</a></li>
+<li><a href="#orgf3aaefd">2.3.2. <span class="todo TODO">TODO</span> 三级标题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hello">hello</span>&#xa0;<span class="world">world</span></span></a></li>
+<li><a href="#orge63303a">2.3.3. <span class="done DONE">DONE</span> 三级标题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hello">hello</span>&#xa0;<span class="world">world</span></span></a></li>
+<li><a href="#org48da62c">2.3.4. <span class="done DONE">DONE</span> this is my task</a></li>
+<li><a href="#orgcb2cc9f">2.3.5. <span class="todo TODO">TODO</span> this is my task</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org5925e45">3. 读书目录</a>
+<li><a href="#org9532209">3. 读书目录</a>
 <ul>
-<li><a href="#orgdaafa6b">3.1. 2022年</a>
+<li><a href="#orgab42beb">3.1. 2022年</a>
 <ul>
-<li><a href="#orga0baedd">3.1.1. 第一轮 <code>[3/9]</code></a></li>
+<li><a href="#org6388004">3.1.1. 第一轮 <code>[3/9]</code></a></li>
 </ul>
 </li>
-<li><a href="#orge593001">3.2. <span class="todo TODO">TODO</span> 《模型思维》 - 斯科特•佩奇</a></li>
-<li><a href="#orgac6e1a9">3.3. <span class="todo TODO">TODO</span> 《思考，快与慢》- 丹尼尔·卡尼曼</a></li>
-<li><a href="#orgb352790">3.4. <span class="todo TODO">TODO</span> 《万能金钥》- 查尔斯•哈尼尔&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></a></li>
-<li><a href="#org788d7d9">3.5. <span class="todo TODO">TODO</span> 《当下的力量》 - 埃克哈特•托利&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></a></li>
-<li><a href="#org70c38a9">3.6. <span class="todo TODO">TODO</span> 《反脆弱》&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></a></li>
-<li><a href="#org958d13a">3.7. <span class="todo TODO">TODO</span> 《刻意练习》&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></a></li>
-<li><a href="#org0de040d">3.8. <span class="todo TODO">TODO</span> 关于爱情 <code>[0/6]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">爱情</span>&#xa0;<span class="__">小说</span></span></a></li>
-<li><a href="#org2b260a7">3.9. <span class="todo TODO">TODO</span> 《哲学的慰藉》 - 阿兰·德波顿&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">哲学</span></span></a></li>
-<li><a href="#orgf56a873">3.10. <span class="todo TODO">TODO</span> 《包法利夫人》 - 居斯塔夫·福楼拜&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></a></li>
-<li><a href="#orgb006ff6">3.11. <span class="todo TODO">TODO</span> 《红与黑》 - 司汤达</a></li>
-<li><a href="#org2fa5f03">3.12. <span class="todo TODO">TODO</span> 《哲学能做什么》 - 加里·古廷</a></li>
-<li><a href="#orgb1e97db">3.13. <span class="todo TODO">TODO</span> 《沉思录》</a></li>
-<li><a href="#org4a922b3">3.14. <span class="todo TODO">TODO</span> 《追忆似水年华》</a></li>
-<li><a href="#orge5971f0">3.15. <span class="todo TODO">TODO</span> 《人间喜剧》 - 巴尔扎克</a></li>
-<li><a href="#org7257358">3.16. <span class="todo TODO">TODO</span> 《瓦尔登湖》 - 卢梭</a></li>
-<li><a href="#org7a5cd65">3.17. <span class="todo TODO">TODO</span> 《非暴力沟通》 - 马歇尔·卢森堡</a></li>
-<li><a href="#org0b18ecf">3.18. <span class="todo TODO">TODO</span> 《堂吉诃德》</a></li>
-<li><a href="#org4a50411">3.19. <span class="todo TODO">TODO</span> 《西西弗神话》</a></li>
-<li><a href="#orgae7b2d5">3.20. <span class="todo TODO">TODO</span> 《神曲》</a></li>
+<li><a href="#org4d7e91b">3.2. <span class="todo TODO">TODO</span> 《模型思维》 - 斯科特•佩奇</a></li>
+<li><a href="#org8409d79">3.3. <span class="todo TODO">TODO</span> 《思考，快与慢》- 丹尼尔·卡尼曼</a></li>
+<li><a href="#org43c5815">3.4. <span class="todo TODO">TODO</span> 《万能金钥》- 查尔斯•哈尼尔&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></a></li>
+<li><a href="#orgede4fce">3.5. <span class="todo TODO">TODO</span> 《当下的力量》 - 埃克哈特•托利&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></a></li>
+<li><a href="#org137ecfe">3.6. <span class="todo TODO">TODO</span> 《反脆弱》&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></a></li>
+<li><a href="#orgec8eb5f">3.7. <span class="todo TODO">TODO</span> 《刻意练习》&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></a></li>
+<li><a href="#org18c5d36">3.8. <span class="todo TODO">TODO</span> 关于爱情 <code>[0/6]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">爱情</span>&#xa0;<span class="__">小说</span></span></a></li>
+<li><a href="#org4d3b57b">3.9. <span class="todo TODO">TODO</span> 《哲学的慰藉》 - 阿兰·德波顿&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">哲学</span></span></a></li>
+<li><a href="#orgb25f851">3.10. <span class="todo TODO">TODO</span> 《包法利夫人》 - 居斯塔夫·福楼拜&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></a></li>
+<li><a href="#org975f38b">3.11. <span class="todo TODO">TODO</span> 《红与黑》 - 司汤达</a></li>
+<li><a href="#org4a75eef">3.12. <span class="todo TODO">TODO</span> 《哲学能做什么》 - 加里·古廷</a></li>
+<li><a href="#orge1f84ce">3.13. <span class="todo TODO">TODO</span> 《沉思录》</a></li>
+<li><a href="#org9e33765">3.14. <span class="todo TODO">TODO</span> 《追忆似水年华》</a></li>
+<li><a href="#org09de55e">3.15. <span class="todo TODO">TODO</span> 《人间喜剧》 - 巴尔扎克</a></li>
+<li><a href="#orgd41a310">3.16. <span class="todo TODO">TODO</span> 《瓦尔登湖》 - 卢梭</a></li>
+<li><a href="#org7ff4761">3.17. <span class="todo TODO">TODO</span> 《非暴力沟通》 - 马歇尔·卢森堡</a></li>
+<li><a href="#org1661217">3.18. <span class="todo TODO">TODO</span> 《堂吉诃德》</a></li>
+<li><a href="#orgb74048c">3.19. <span class="todo TODO">TODO</span> 《西西弗神话》</a></li>
+<li><a href="#org5f12b20">3.20. <span class="todo TODO">TODO</span> 《神曲》</a></li>
 </ul>
 </li>
-<li><a href="#org89035de">4. 已读</a>
+<li><a href="#org4863d42">4. 已读</a>
 <ul>
-<li><a href="#org2c61b13">4.1. <span class="done DONE">DONE</span> 《当尼采哭泣》 - 欧文·亚隆&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">哲学</span>&#xa0;<span class="___">心理学</span></span></a></li>
-<li><a href="#orge2adb86">4.2. <span class="done DONE">DONE</span> 《图解HTTP》- 上野宣、于均良</a></li>
-<li><a href="#org1d97806">4.3. <span class="done DONE">DONE</span> 《百年孤独》 - 加西亚•马尔克斯&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></a></li>
-<li><a href="#org53e9524">4.4. <span class="done DONE">DONE</span> 《1984》 - 乔治·奥威尔&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></a></li>
-<li><a href="#orgdfb3c4c">4.5. <span class="done DONE">DONE</span> 《刀锋》 - 威廉·萨默赛特·毛姆&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></a></li>
-<li><a href="#orgf98c565">4.6. <span class="done DONE">DONE</span> 《月亮与六便士》 - 威廉·萨默赛特·毛姆&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></a></li>
-<li><a href="#org040f5b2">4.7. <span class="done DONE">DONE</span> 《十分钟冥想》&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></a></li>
+<li><a href="#org1c03580">4.1. <span class="done DONE">DONE</span> 《当尼采哭泣》 - 欧文·亚隆&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">哲学</span>&#xa0;<span class="___">心理学</span></span></a></li>
+<li><a href="#orgd5548e2">4.2. <span class="done DONE">DONE</span> 《图解HTTP》- 上野宣、于均良</a></li>
+<li><a href="#org302e118">4.3. <span class="done DONE">DONE</span> 《百年孤独》 - 加西亚•马尔克斯&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></a></li>
+<li><a href="#org8280f69">4.4. <span class="done DONE">DONE</span> 《1984》 - 乔治·奥威尔&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></a></li>
+<li><a href="#org1b99fe7">4.5. <span class="done DONE">DONE</span> 《刀锋》 - 威廉·萨默赛特·毛姆&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></a></li>
+<li><a href="#org12f275c">4.6. <span class="done DONE">DONE</span> 《月亮与六便士》 - 威廉·萨默赛特·毛姆&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></a></li>
+<li><a href="#org88ce9fa">4.7. <span class="done DONE">DONE</span> 《十分钟冥想》&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
+<p>
+:ID:       278e7d6c-fc2c-437d-a231-2b7db219a369
+</p>
 
 
-<div id="outline-container-org69c6bc5" class="outline-2">
-<h2 id="org69c6bc5"><span class="section-number-2">1.</span> 一级标题</h2>
+<div id="outline-container-orgdca7f76" class="outline-2">
+<h2 id="orgdca7f76"><span class="section-number-2">1.</span> 一级标题</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 bold: <b>bold</b>
@@ -358,6 +179,38 @@ strike-through: <del>strike-through</del>
 <td class="org-left">&#xa0;</td>
 </tr>
 </tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">thead</th>
+<th scope="col" class="org-left">thead</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">title1</td>
+<td class="org-left">cell</td>
+<td class="org-left">cell</td>
+</tr>
+
+<tr>
+<td class="org-left">title2</td>
+<td class="org-left">cell</td>
+<td class="org-left">cell</td>
+</tr>
+</tbody>
 </table></li>
 </ul></li>
 </ul>
@@ -380,16 +233,16 @@ strike-through: <del>strike-through</del>
 </ol>
 </div>
 
-<div id="outline-container-orgb5bf443" class="outline-3">
-<h3 id="orgb5bf443"><span class="section-number-3">1.1.</span> 二级标题 1&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">你好</span>&#xa0;<span class="__">世界</span>&#xa0;<span class="___">冒险岛</span>&#xa0;<span class="_______">还是觉得你最好</span></span></h3>
+<div id="outline-container-org9795fdb" class="outline-3">
+<h3 id="org9795fdb"><span class="section-number-3">1.1.</span> 二级标题 1&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">你好</span>&#xa0;<span class="__">世界</span>&#xa0;<span class="___">冒险岛</span>&#xa0;<span class="_______">还是觉得你最好</span></span></h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
-<div id="outline-container-org6ae8c9c" class="outline-4">
-<h4 id="org6ae8c9c"><span class="section-number-4">1.1.1.</span> 三级标题</h4>
+<div id="outline-container-org8071d1e" class="outline-4">
+<h4 id="org8071d1e"><span class="section-number-4">1.1.1.</span> 三级标题</h4>
 <div class="outline-text-4" id="text-1-1-1">
 </div>
 <ol class="org-ol">
-<li><a id="orgb6cc97a"></a>四级标题<br />
+<li><a id="org6567868"></a>四级标题<br />
 <div class="outline-text-5" id="text-1-1-1-1">
 <p>
 content:
@@ -480,12 +333,12 @@ long line.long line.long line.long line.long line.long line.long line.long line.
 </ol>
 </div>
 </div>
-<div id="outline-container-org8a94c2b" class="outline-3">
-<h3 id="org8a94c2b"><span class="section-number-3">1.2.</span> 二级标题 二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 22&#xa0;&#xa0;&#xa0;<span class="tag"><span class="asdf">asdf</span>&#xa0;<span class="adf">adf</span>&#xa0;<span class="__">你好</span></span></h3>
+<div id="outline-container-orgacf4322" class="outline-3">
+<h3 id="orgacf4322"><span class="section-number-3">1.2.</span> 二级标题 二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 22&#xa0;&#xa0;&#xa0;<span class="tag"><span class="asdf">asdf</span>&#xa0;<span class="adf">adf</span>&#xa0;<span class="__">你好</span></span></h3>
 <div class="outline-text-3" id="text-1-2">
 </div>
-<div id="outline-container-org25623c4" class="outline-4">
-<h4 id="org25623c4"><span class="section-number-4">1.2.1.</span> 三级标题</h4>
+<div id="outline-container-orgf8afdf8" class="outline-4">
+<h4 id="orgf8afdf8"><span class="section-number-4">1.2.1.</span> 三级标题</h4>
 <div class="outline-text-4" id="text-1-2-1">
 <ol class="org-ol">
 <li>有序列表
@@ -543,7 +396,7 @@ long line.long line.long line.long line.long line.long line.long line.long line.
 </div>
 
 
-<pre class="example" id="orgee8ab4f">
+<pre class="example" id="orgb653c08">
 example
 example
 example
@@ -568,7 +421,7 @@ quote
 </p>
 
 
-<div id="orgd62ef83" class="figure">
+<div id="org09c8a2b" class="figure">
 <p><img src="./public/image.jpg" alt="image.jpg" />
 </p>
 </div>
@@ -612,11 +465,11 @@ long line.long line.long line.long line.long line.long line.long line.long line.
 </div>
 
 
-<div id="outline-container-org6d809e2" class="outline-4">
-<h4 id="org6d809e2"><span class="section-number-4">1.2.2.</span> <span class="todo TODO">TODO</span> 三级标题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hello">hello</span>&#xa0;<span class="world">world</span></span></h4>
+<div id="outline-container-orge8afd6b" class="outline-4">
+<h4 id="orge8afd6b"><span class="section-number-4">1.2.2.</span> <span class="todo TODO">TODO</span> 三级标题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hello">hello</span>&#xa0;<span class="world">world</span></span></h4>
 </div>
-<div id="outline-container-org31b2d5a" class="outline-4">
-<h4 id="org31b2d5a"><span class="section-number-4">1.2.3.</span> <span class="done DONE">DONE</span> 三级标题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hello">hello</span>&#xa0;<span class="world">world</span></span></h4>
+<div id="outline-container-org7873f8b" class="outline-4">
+<h4 id="org7873f8b"><span class="section-number-4">1.2.3.</span> <span class="done DONE">DONE</span> 三级标题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hello">hello</span>&#xa0;<span class="world">world</span></span></h4>
 <div class="outline-text-4" id="text-1-2-3">
 <ul class="org-ul">
 <li class="trans"><code>[-]</code> task 1 <code>[60%]</code>
@@ -643,14 +496,14 @@ long line.long line.long line.long line.long line.long line.long line.long line.
 </div>
 </div>
 
-<div id="outline-container-org13c712e" class="outline-4">
-<h4 id="org13c712e"><span class="section-number-4">1.2.4.</span> <span class="done DONE">DONE</span> this is my task</h4>
+<div id="outline-container-orgd7208d2" class="outline-4">
+<h4 id="orgd7208d2"><span class="section-number-4">1.2.4.</span> <span class="done DONE">DONE</span> this is my task</h4>
 <div class="outline-text-4" id="text-1-2-4">
 </div>
 </div>
 
-<div id="outline-container-org9726a40" class="outline-4">
-<h4 id="org9726a40"><span class="section-number-4">1.2.5.</span> <span class="todo TODO">TODO</span> this is my task</h4>
+<div id="outline-container-org96f1d47" class="outline-4">
+<h4 id="org96f1d47"><span class="section-number-4">1.2.5.</span> <span class="todo TODO">TODO</span> this is my task</h4>
 <div class="outline-text-4" id="text-1-2-5">
 </div>
 </div>
@@ -658,8 +511,8 @@ long line.long line.long line.long line.long line.long line.long line.long line.
 
 
 
-<div id="outline-container-org9e135ff" class="outline-3">
-<h3 id="org9e135ff"><span class="section-number-3">1.3.</span> footnote test</h3>
+<div id="outline-container-orge0faeb3" class="outline-3">
+<h3 id="orge0faeb3"><span class="section-number-3">1.3.</span> footnote test</h3>
 <div class="outline-text-3" id="text-1-3">
 <ul class="org-ul">
 <li>Footnote one: name<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup></li>
@@ -670,8 +523,8 @@ long line.long line.long line.long line.long line.long line.long line.long line.
 </div>
 </div>
 
-<div id="outline-container-orgb199fb9" class="outline-2">
-<h2 id="orgb199fb9"><span class="section-number-2">2.</span> 一级标题2</h2>
+<div id="outline-container-org01fa034" class="outline-2">
+<h2 id="org01fa034"><span class="section-number-2">2.</span> 一级标题2</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 bold: <b>bold</b>
@@ -770,12 +623,12 @@ strike-through: <del>strike-through</del>
 </ol>
 </div>
 
-<div id="outline-container-orgb069619" class="outline-3">
-<h3 id="orgb069619"><span class="section-number-3">2.1.</span> 二级标题 1&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">你好</span>&#xa0;<span class="__">世界</span>&#xa0;<span class="___">冒险岛</span>&#xa0;<span class="_______">还是觉得你最好</span></span></h3>
+<div id="outline-container-org910c1b5" class="outline-3">
+<h3 id="org910c1b5"><span class="section-number-3">2.1.</span> 二级标题 1&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">你好</span>&#xa0;<span class="__">世界</span>&#xa0;<span class="___">冒险岛</span>&#xa0;<span class="_______">还是觉得你最好</span></span></h3>
 </div>
 
-<div id="outline-container-org7f74f91" class="outline-3">
-<h3 id="org7f74f91"><span class="section-number-3">2.2.</span> footnote test 2</h3>
+<div id="outline-container-orge53afd6" class="outline-3">
+<h3 id="orge53afd6"><span class="section-number-3">2.2.</span> footnote test 2</h3>
 <div class="outline-text-3" id="text-2-2">
 <ul class="org-ul">
 <li>Footnote two one: anonymous<sup><a id="fnr.3.100" class="footref" href="#fn.3" role="doc-backlink">3</a></sup></li>
@@ -785,12 +638,12 @@ strike-through: <del>strike-through</del>
 </div>
 </div>
 
-<div id="outline-container-orgd1c21e1" class="outline-3">
-<h3 id="orgd1c21e1"><span class="section-number-3">2.3.</span> 二级标题 二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 22</h3>
+<div id="outline-container-org9213676" class="outline-3">
+<h3 id="org9213676"><span class="section-number-3">2.3.</span> 二级标题 二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 2二级标题 22</h3>
 <div class="outline-text-3" id="text-2-3">
 </div>
-<div id="outline-container-org041667b" class="outline-4">
-<h4 id="org041667b"><span class="section-number-4">2.3.1.</span> 三级标题</h4>
+<div id="outline-container-org8d4483c" class="outline-4">
+<h4 id="org8d4483c"><span class="section-number-4">2.3.1.</span> 三级标题</h4>
 <div class="outline-text-4" id="text-2-3-1">
 <ol class="org-ol">
 <li>有序列表
@@ -813,7 +666,7 @@ strike-through: <del>strike-through</del>
 </ol></li>
 </ol>
 
-<pre class="example" id="org7e7bd9d">
+<pre class="example" id="orge131f90">
 
 example
 example
@@ -835,11 +688,11 @@ quote
 </div>
 
 
-<div id="outline-container-org8dcb8fa" class="outline-4">
-<h4 id="org8dcb8fa"><span class="section-number-4">2.3.2.</span> <span class="todo TODO">TODO</span> 三级标题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hello">hello</span>&#xa0;<span class="world">world</span></span></h4>
+<div id="outline-container-orgf3aaefd" class="outline-4">
+<h4 id="orgf3aaefd"><span class="section-number-4">2.3.2.</span> <span class="todo TODO">TODO</span> 三级标题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hello">hello</span>&#xa0;<span class="world">world</span></span></h4>
 </div>
-<div id="outline-container-org31eb862" class="outline-4">
-<h4 id="org31eb862"><span class="section-number-4">2.3.3.</span> <span class="done DONE">DONE</span> 三级标题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hello">hello</span>&#xa0;<span class="world">world</span></span></h4>
+<div id="outline-container-orge63303a" class="outline-4">
+<h4 id="orge63303a"><span class="section-number-4">2.3.3.</span> <span class="done DONE">DONE</span> 三级标题&#xa0;&#xa0;&#xa0;<span class="tag"><span class="hello">hello</span>&#xa0;<span class="world">world</span></span></h4>
 <div class="outline-text-4" id="text-2-3-3">
 <ul class="org-ul">
 <li class="trans"><code>[-]</code> task 1 <code>[60%]</code>
@@ -866,80 +719,80 @@ quote
 </div>
 </div>
 
-<div id="outline-container-org97dff80" class="outline-4">
-<h4 id="org97dff80"><span class="section-number-4">2.3.4.</span> <span class="done DONE">DONE</span> this is my task</h4>
+<div id="outline-container-org48da62c" class="outline-4">
+<h4 id="org48da62c"><span class="section-number-4">2.3.4.</span> <span class="done DONE">DONE</span> this is my task</h4>
 <div class="outline-text-4" id="text-2-3-4">
 </div>
 </div>
 
-<div id="outline-container-orgd33f779" class="outline-4">
-<h4 id="orgd33f779"><span class="section-number-4">2.3.5.</span> <span class="todo TODO">TODO</span> this is my task</h4>
+<div id="outline-container-orgcb2cc9f" class="outline-4">
+<h4 id="orgcb2cc9f"><span class="section-number-4">2.3.5.</span> <span class="todo TODO">TODO</span> this is my task</h4>
 <div class="outline-text-4" id="text-2-3-5">
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org5925e45" class="outline-2">
-<h2 id="org5925e45"><span class="section-number-2">3.</span> 读书目录</h2>
+<div id="outline-container-org9532209" class="outline-2">
+<h2 id="org9532209"><span class="section-number-2">3.</span> 读书目录</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orgdaafa6b" class="outline-3">
-<h3 id="orgdaafa6b"><span class="section-number-3">3.1.</span> 2022年</h3>
+<div id="outline-container-orgab42beb" class="outline-3">
+<h3 id="orgab42beb"><span class="section-number-3">3.1.</span> 2022年</h3>
 <div class="outline-text-3" id="text-3-1">
 </div>
-<div id="outline-container-orga0baedd" class="outline-4">
-<h4 id="orga0baedd"><span class="section-number-4">3.1.1.</span> 第一轮 <code>[3/9]</code></h4>
+<div id="outline-container-org6388004" class="outline-4">
+<h4 id="org6388004"><span class="section-number-4">3.1.1.</span> 第一轮 <code>[3/9]</code></h4>
 <div class="outline-text-4" id="text-3-1-1">
 </div>
 <ol class="org-ol">
-<li><a id="org29bf195"></a><span class="done DONE">DONE</span> 《苏菲的世界》 - 乔斯坦·贾德&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">哲学</span>&#xa0;<span class="__">小说</span></span><br />
+<li><a id="org4a08df1"></a><span class="done DONE">DONE</span> 《苏菲的世界》 - 乔斯坦·贾德&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">哲学</span>&#xa0;<span class="__">小说</span></span><br />
 <div class="outline-text-5" id="text-3-1-1-1">
 </div>
 </li>
-<li><a id="org60519ec"></a><span class="todo TODO">TODO</span> 《酒吧长谈》 - 马里奥·巴尔加斯·略萨<br /></li>
-<li><a id="orga8448fb"></a><span class="done DONE">DONE</span> 《濒死经验的启示》 - 木内鹤彦<br />
+<li><a id="org1f21ef9"></a><span class="todo TODO">TODO</span> 《酒吧长谈》 - 马里奥·巴尔加斯·略萨<br /></li>
+<li><a id="orgcc5176b"></a><span class="done DONE">DONE</span> 《濒死经验的启示》 - 木内鹤彦<br />
 <div class="outline-text-5" id="text-3-1-1-3">
 </div>
 </li>
-<li><a id="orga419221"></a><span class="todo TODO">TODO</span> 《地球编年史》 - 撒迦利亚·西琴<br /></li>
-<li><a id="orga585c01"></a><span class="done DONE">DONE</span> 《前世今生》 - 布莱恩·魏斯&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span><br />
+<li><a id="org9d1e383"></a><span class="todo TODO">TODO</span> 《地球编年史》 - 撒迦利亚·西琴<br /></li>
+<li><a id="orgb3fbdf2"></a><span class="done DONE">DONE</span> 《前世今生》 - 布莱恩·魏斯&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span><br />
 <div class="outline-text-5" id="text-3-1-1-5">
 </div>
 </li>
-<li><a id="orgf46c706"></a><span class="todo TODO">TODO</span> 《中国人的性格》 - 李明良<br /></li>
-<li><a id="org3277fb7"></a><span class="todo TODO">TODO</span> 《跳出头脑，融入生活》- [美] 史蒂文·C.海斯 / [美] 斯宾斯·史密斯&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span><br /></li>
-<li><a id="org09927b7"></a><span class="done DONE">DONE</span> 《怪诞行为学》 - 丹‧艾瑞利&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span><br />
+<li><a id="org45ff59d"></a><span class="todo TODO">TODO</span> 《中国人的性格》 - 李明良<br /></li>
+<li><a id="org156d173"></a><span class="todo TODO">TODO</span> 《跳出头脑，融入生活》- [美] 史蒂文·C.海斯 / [美] 斯宾斯·史密斯&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span><br /></li>
+<li><a id="org9a81397"></a><span class="done DONE">DONE</span> 《怪诞行为学》 - 丹‧艾瑞利&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span><br />
 <div class="outline-text-5" id="text-3-1-1-8">
 <ul class="org-ul">
 <li>State "DONE"       from "TODO"       <span class="timestamp-wrapper"><span class="timestamp">[2023-01-31 二 04:37]</span></span></li>
 </ul>
 </div>
 </li>
-<li><a id="org5a24ed6"></a><span class="todo TODO">TODO</span> 《第二种忠诚》 - 刘宾燕<br /></li>
+<li><a id="org5e7a16a"></a><span class="todo TODO">TODO</span> 《第二种忠诚》 - 刘宾燕<br /></li>
 </ol>
 </div>
 </div>
-<div id="outline-container-orge593001" class="outline-3">
-<h3 id="orge593001"><span class="section-number-3">3.2.</span> <span class="todo TODO">TODO</span> 《模型思维》 - 斯科特•佩奇</h3>
+<div id="outline-container-org4d7e91b" class="outline-3">
+<h3 id="org4d7e91b"><span class="section-number-3">3.2.</span> <span class="todo TODO">TODO</span> 《模型思维》 - 斯科特•佩奇</h3>
 </div>
-<div id="outline-container-orgac6e1a9" class="outline-3">
-<h3 id="orgac6e1a9"><span class="section-number-3">3.3.</span> <span class="todo TODO">TODO</span> 《思考，快与慢》- 丹尼尔·卡尼曼</h3>
+<div id="outline-container-org8409d79" class="outline-3">
+<h3 id="org8409d79"><span class="section-number-3">3.3.</span> <span class="todo TODO">TODO</span> 《思考，快与慢》- 丹尼尔·卡尼曼</h3>
 </div>
-<div id="outline-container-orgb352790" class="outline-3">
-<h3 id="orgb352790"><span class="section-number-3">3.4.</span> <span class="todo TODO">TODO</span> 《万能金钥》- 查尔斯•哈尼尔&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></h3>
+<div id="outline-container-org43c5815" class="outline-3">
+<h3 id="org43c5815"><span class="section-number-3">3.4.</span> <span class="todo TODO">TODO</span> 《万能金钥》- 查尔斯•哈尼尔&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></h3>
 </div>
-<div id="outline-container-org788d7d9" class="outline-3">
-<h3 id="org788d7d9"><span class="section-number-3">3.5.</span> <span class="todo TODO">TODO</span> 《当下的力量》 - 埃克哈特•托利&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></h3>
+<div id="outline-container-orgede4fce" class="outline-3">
+<h3 id="orgede4fce"><span class="section-number-3">3.5.</span> <span class="todo TODO">TODO</span> 《当下的力量》 - 埃克哈特•托利&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></h3>
 </div>
-<div id="outline-container-org70c38a9" class="outline-3">
-<h3 id="org70c38a9"><span class="section-number-3">3.6.</span> <span class="todo TODO">TODO</span> 《反脆弱》&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></h3>
+<div id="outline-container-org137ecfe" class="outline-3">
+<h3 id="org137ecfe"><span class="section-number-3">3.6.</span> <span class="todo TODO">TODO</span> 《反脆弱》&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></h3>
 </div>
-<div id="outline-container-org958d13a" class="outline-3">
-<h3 id="org958d13a"><span class="section-number-3">3.7.</span> <span class="todo TODO">TODO</span> 《刻意练习》&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></h3>
+<div id="outline-container-orgec8eb5f" class="outline-3">
+<h3 id="orgec8eb5f"><span class="section-number-3">3.7.</span> <span class="todo TODO">TODO</span> 《刻意练习》&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></h3>
 </div>
-<div id="outline-container-org0de040d" class="outline-3">
-<h3 id="org0de040d"><span class="section-number-3">3.8.</span> <span class="todo TODO">TODO</span> 关于爱情 <code>[0/6]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">爱情</span>&#xa0;<span class="__">小说</span></span></h3>
+<div id="outline-container-org18c5d36" class="outline-3">
+<h3 id="org18c5d36"><span class="section-number-3">3.8.</span> <span class="todo TODO">TODO</span> 关于爱情 <code>[0/6]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">爱情</span>&#xa0;<span class="__">小说</span></span></h3>
 <div class="outline-text-3" id="text-3-8">
 <ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> 《爱的艺术》</li>
@@ -951,81 +804,81 @@ quote
 </ul>
 </div>
 </div>
-<div id="outline-container-org2b260a7" class="outline-3">
-<h3 id="org2b260a7"><span class="section-number-3">3.9.</span> <span class="todo TODO">TODO</span> 《哲学的慰藉》 - 阿兰·德波顿&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">哲学</span></span></h3>
+<div id="outline-container-org4d3b57b" class="outline-3">
+<h3 id="org4d3b57b"><span class="section-number-3">3.9.</span> <span class="todo TODO">TODO</span> 《哲学的慰藉》 - 阿兰·德波顿&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">哲学</span></span></h3>
 </div>
-<div id="outline-container-orgf56a873" class="outline-3">
-<h3 id="orgf56a873"><span class="section-number-3">3.10.</span> <span class="todo TODO">TODO</span> 《包法利夫人》 - 居斯塔夫·福楼拜&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></h3>
+<div id="outline-container-orgb25f851" class="outline-3">
+<h3 id="orgb25f851"><span class="section-number-3">3.10.</span> <span class="todo TODO">TODO</span> 《包法利夫人》 - 居斯塔夫·福楼拜&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></h3>
 </div>
-<div id="outline-container-orgb006ff6" class="outline-3">
-<h3 id="orgb006ff6"><span class="section-number-3">3.11.</span> <span class="todo TODO">TODO</span> 《红与黑》 - 司汤达</h3>
+<div id="outline-container-org975f38b" class="outline-3">
+<h3 id="org975f38b"><span class="section-number-3">3.11.</span> <span class="todo TODO">TODO</span> 《红与黑》 - 司汤达</h3>
 </div>
-<div id="outline-container-org2fa5f03" class="outline-3">
-<h3 id="org2fa5f03"><span class="section-number-3">3.12.</span> <span class="todo TODO">TODO</span> 《哲学能做什么》 - 加里·古廷</h3>
+<div id="outline-container-org4a75eef" class="outline-3">
+<h3 id="org4a75eef"><span class="section-number-3">3.12.</span> <span class="todo TODO">TODO</span> 《哲学能做什么》 - 加里·古廷</h3>
 </div>
-<div id="outline-container-orgb1e97db" class="outline-3">
-<h3 id="orgb1e97db"><span class="section-number-3">3.13.</span> <span class="todo TODO">TODO</span> 《沉思录》</h3>
+<div id="outline-container-orge1f84ce" class="outline-3">
+<h3 id="orge1f84ce"><span class="section-number-3">3.13.</span> <span class="todo TODO">TODO</span> 《沉思录》</h3>
 </div>
-<div id="outline-container-org4a922b3" class="outline-3">
-<h3 id="org4a922b3"><span class="section-number-3">3.14.</span> <span class="todo TODO">TODO</span> 《追忆似水年华》</h3>
+<div id="outline-container-org9e33765" class="outline-3">
+<h3 id="org9e33765"><span class="section-number-3">3.14.</span> <span class="todo TODO">TODO</span> 《追忆似水年华》</h3>
 </div>
-<div id="outline-container-orge5971f0" class="outline-3">
-<h3 id="orge5971f0"><span class="section-number-3">3.15.</span> <span class="todo TODO">TODO</span> 《人间喜剧》 - 巴尔扎克</h3>
+<div id="outline-container-org09de55e" class="outline-3">
+<h3 id="org09de55e"><span class="section-number-3">3.15.</span> <span class="todo TODO">TODO</span> 《人间喜剧》 - 巴尔扎克</h3>
 </div>
-<div id="outline-container-org7257358" class="outline-3">
-<h3 id="org7257358"><span class="section-number-3">3.16.</span> <span class="todo TODO">TODO</span> 《瓦尔登湖》 - 卢梭</h3>
+<div id="outline-container-orgd41a310" class="outline-3">
+<h3 id="orgd41a310"><span class="section-number-3">3.16.</span> <span class="todo TODO">TODO</span> 《瓦尔登湖》 - 卢梭</h3>
 </div>
-<div id="outline-container-org7a5cd65" class="outline-3">
-<h3 id="org7a5cd65"><span class="section-number-3">3.17.</span> <span class="todo TODO">TODO</span> 《非暴力沟通》 - 马歇尔·卢森堡</h3>
+<div id="outline-container-org7ff4761" class="outline-3">
+<h3 id="org7ff4761"><span class="section-number-3">3.17.</span> <span class="todo TODO">TODO</span> 《非暴力沟通》 - 马歇尔·卢森堡</h3>
 </div>
-<div id="outline-container-org0b18ecf" class="outline-3">
-<h3 id="org0b18ecf"><span class="section-number-3">3.18.</span> <span class="todo TODO">TODO</span> 《堂吉诃德》</h3>
+<div id="outline-container-org1661217" class="outline-3">
+<h3 id="org1661217"><span class="section-number-3">3.18.</span> <span class="todo TODO">TODO</span> 《堂吉诃德》</h3>
 </div>
-<div id="outline-container-org4a50411" class="outline-3">
-<h3 id="org4a50411"><span class="section-number-3">3.19.</span> <span class="todo TODO">TODO</span> 《西西弗神话》</h3>
+<div id="outline-container-orgb74048c" class="outline-3">
+<h3 id="orgb74048c"><span class="section-number-3">3.19.</span> <span class="todo TODO">TODO</span> 《西西弗神话》</h3>
 </div>
-<div id="outline-container-orgae7b2d5" class="outline-3">
-<h3 id="orgae7b2d5"><span class="section-number-3">3.20.</span> <span class="todo TODO">TODO</span> 《神曲》</h3>
+<div id="outline-container-org5f12b20" class="outline-3">
+<h3 id="org5f12b20"><span class="section-number-3">3.20.</span> <span class="todo TODO">TODO</span> 《神曲》</h3>
 </div>
 </div>
 
 
-<div id="outline-container-org89035de" class="outline-2">
-<h2 id="org89035de"><span class="section-number-2">4.</span> 已读</h2>
+<div id="outline-container-org4863d42" class="outline-2">
+<h2 id="org4863d42"><span class="section-number-2">4.</span> 已读</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org2c61b13" class="outline-3">
-<h3 id="org2c61b13"><span class="section-number-3">4.1.</span> <span class="done DONE">DONE</span> 《当尼采哭泣》 - 欧文·亚隆&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">哲学</span>&#xa0;<span class="___">心理学</span></span></h3>
+<div id="outline-container-org1c03580" class="outline-3">
+<h3 id="org1c03580"><span class="section-number-3">4.1.</span> <span class="done DONE">DONE</span> 《当尼采哭泣》 - 欧文·亚隆&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">哲学</span>&#xa0;<span class="___">心理学</span></span></h3>
 <div class="outline-text-3" id="text-4-1">
 </div>
 </div>
-<div id="outline-container-orge2adb86" class="outline-3">
-<h3 id="orge2adb86"><span class="section-number-3">4.2.</span> <span class="done DONE">DONE</span> 《图解HTTP》- 上野宣、于均良</h3>
+<div id="outline-container-orgd5548e2" class="outline-3">
+<h3 id="orgd5548e2"><span class="section-number-3">4.2.</span> <span class="done DONE">DONE</span> 《图解HTTP》- 上野宣、于均良</h3>
 <div class="outline-text-3" id="text-4-2">
 </div>
 </div>
-<div id="outline-container-org1d97806" class="outline-3">
-<h3 id="org1d97806"><span class="section-number-3">4.3.</span> <span class="done DONE">DONE</span> 《百年孤独》 - 加西亚•马尔克斯&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></h3>
+<div id="outline-container-org302e118" class="outline-3">
+<h3 id="org302e118"><span class="section-number-3">4.3.</span> <span class="done DONE">DONE</span> 《百年孤独》 - 加西亚•马尔克斯&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></h3>
 <div class="outline-text-3" id="text-4-3">
 </div>
 </div>
-<div id="outline-container-org53e9524" class="outline-3">
-<h3 id="org53e9524"><span class="section-number-3">4.4.</span> <span class="done DONE">DONE</span> 《1984》 - 乔治·奥威尔&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></h3>
+<div id="outline-container-org8280f69" class="outline-3">
+<h3 id="org8280f69"><span class="section-number-3">4.4.</span> <span class="done DONE">DONE</span> 《1984》 - 乔治·奥威尔&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></h3>
 <div class="outline-text-3" id="text-4-4">
 </div>
 </div>
-<div id="outline-container-orgdfb3c4c" class="outline-3">
-<h3 id="orgdfb3c4c"><span class="section-number-3">4.5.</span> <span class="done DONE">DONE</span> 《刀锋》 - 威廉·萨默赛特·毛姆&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></h3>
+<div id="outline-container-org1b99fe7" class="outline-3">
+<h3 id="org1b99fe7"><span class="section-number-3">4.5.</span> <span class="done DONE">DONE</span> 《刀锋》 - 威廉·萨默赛特·毛姆&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></h3>
 <div class="outline-text-3" id="text-4-5">
 </div>
 </div>
-<div id="outline-container-orgf98c565" class="outline-3">
-<h3 id="orgf98c565"><span class="section-number-3">4.6.</span> <span class="done DONE">DONE</span> 《月亮与六便士》 - 威廉·萨默赛特·毛姆&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></h3>
+<div id="outline-container-org12f275c" class="outline-3">
+<h3 id="org12f275c"><span class="section-number-3">4.6.</span> <span class="done DONE">DONE</span> 《月亮与六便士》 - 威廉·萨默赛特·毛姆&#xa0;&#xa0;&#xa0;<span class="tag"><span class="__">小说</span></span></h3>
 <div class="outline-text-3" id="text-4-6">
 </div>
 </div>
-<div id="outline-container-org040f5b2" class="outline-3">
-<h3 id="org040f5b2"><span class="section-number-3">4.7.</span> <span class="done DONE">DONE</span> 《十分钟冥想》&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></h3>
+<div id="outline-container-org88ce9fa" class="outline-3">
+<h3 id="org88ce9fa"><span class="section-number-3">4.7.</span> <span class="done DONE">DONE</span> 《十分钟冥想》&#xa0;&#xa0;&#xa0;<span class="tag"><span class="___">心理学</span></span></h3>
 <div class="outline-text-3" id="text-4-7">
 </div>
 </div>
@@ -1052,7 +905,7 @@ this is first footnote one
 <div id="postamble" class="status">
 <p class="date">Date: 2023-02-11 六 00:00</p>
 <p class="author">Author: yzs</p>
-<p class="date">Created: 2023-10-21 六 10:49</p>
+<p class="date">Created: 2023-10-23 一 11:41</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

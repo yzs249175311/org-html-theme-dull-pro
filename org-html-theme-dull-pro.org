@@ -6,13 +6,12 @@
 #+author: yzs
 #+date: [2023-02-11 六]
 
-
 * 一级标题
-
 bold: *bold*
 italic: /italic/
 underlined: _underlined_
 verbatim: =verbatim=
+
 code: ~code~
 strike-through: +strike-through+
 
@@ -32,8 +31,26 @@ strike-through: +strike-through+
     | cell  | cell  | cell  |
     | 中文  | 中文  | cell  |
     |       |       |       |
-    |       |       |       |
-    |       |       |       |
+
+    | a | b |
+    | 1 | 2 |
+
+
+    | thead  | thead  | thead  |
+    | thead1 | thead1 | thead1 |
+    |--------+--------+--------|
+    | cell   | cell   | cell   |
+    | 中文    | 中文    | cell   |
+    |        |        |        |
+
+    Grouping columns:
+    |   |  N | N^2 | N^3 | N^4 | sqrt(n) | sqrt[4](N) |
+    |---+----+-----+-----+-----+---------+------------|
+    | / | <> |   < |     |   > |       < |          > |
+    | # |  1 |   1 |   1 |   1 |       1 |          1 |
+    | # |  2 |   4 |   8 |  16 |  1.4142 |     1.1892 |
+    | # |  3 |   9 |  27 |  81 |  1.7321 |     1.3161 |
+    |---+----+-----+-----+-----+---------+------------|
 
 
 1. 有序列表
@@ -72,7 +89,9 @@ content:
 #+begin_src conf
 
   [colors]
-  ; background = #282a2e
+
+
+ ; background = #282a2e
   background = #00000000
   background-alt = #373b41
   foreground = #c5c8c6
