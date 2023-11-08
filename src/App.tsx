@@ -5,7 +5,6 @@ import Postamble from "@/components/Postamble.component";
 import Grid from "@mui/material/Grid";
 /* import './App.scss' */
 
-
 function App() {
   return (
     <>
@@ -14,15 +13,15 @@ function App() {
         sx={{ height: "100vh" }}
         className="h-screen overflow-hidden"
       >
-        <Grid item xs={3} className="shadow-lg">
+        <Grid item xs={2.5} className="shadow-lg">
           <Navigation />
         </Grid>
-        <Grid item xs={9}>
+        <Grid item xs={9.5}>
           <MainContent />
         </Grid>
       </Grid>
 
-		  <Footnotes className="hidden" />
+      <Footnotes className="hidden" />
       <Postamble className="hidden" />
     </>
   );

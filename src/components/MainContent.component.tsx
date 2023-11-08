@@ -28,7 +28,7 @@ const MainContent: React.FC = () => {
     <motion.div
       initial={mainAnimate.initial}
       animate={mainAnimate.show}
-      className={`${styles.main} main-content px-12 h-screen overflow-x-hidden overflow-y-auto scroll-smooth`}
+      className={`${styles.main} main-content px-[10rem] h-screen overflow-x-hidden overflow-y-auto scroll-smooth`}
     >
       {vContainers.map((vDom) => (
         <OutlineCountainer key={vDom.uid} vDom={vDom}></OutlineCountainer>

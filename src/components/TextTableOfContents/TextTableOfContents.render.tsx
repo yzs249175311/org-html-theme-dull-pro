@@ -2,6 +2,7 @@ import styles from "./TextTableOfContents.module.scss";
 import { useState, useMemo, useRef, Fragment } from "react";
 import { useAppDispatch } from "@/store/store";
 import { useSelector } from "react-redux";
+import ForwardIcon from "@mui/icons-material/Forward";
 import { selectHref } from "@/store/navigator/navigator.selector";
 import { motion } from "framer-motion";
 import { tagColorMap } from "@/utils/constants.util";
@@ -63,7 +64,7 @@ export const renderLi = withMatcher("li", function (vDom, render) {
     setHrefDebounce(href, dispatch, true);
   };
 
-  //渲染子列表
+  //渲染展开子列表
   let renderExpand = () => {
     return hasExpand === -1 ? (
       ""
@@ -80,6 +81,7 @@ export const renderLi = withMatcher("li", function (vDom, render) {
         <Chip
           label={childElementCount}
           color="primary"
+          size="small"
           variant="outlined"
           onClick={() => {
             setOpen(!open);
@@ -92,7 +94,7 @@ export const renderLi = withMatcher("li", function (vDom, render) {
   return (
     <Fragment key={vDom.uid}>
       <ListItemButton
-        className={`${styles["nav-list"]}`}
+        className={`${styles["nav-list"]} ${selected ? "selected" : ""}`}
         ref={selfRef}
         selected={selected}
         {...(vDom.attributes as any)}
@@ -106,13 +108,15 @@ export const renderLi = withMatcher("li", function (vDom, render) {
           })}
         {selected ? (
           <motion.div
-            className="w-full absolute h-[3px] bottom-0 left-0 pointer-events-none"
-            style={{
-              backgroundColor: "var(--brand-color)",
-            }}
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-          ></motion.div>
+            layoutId="selectedBlock"
+            className="absolute bottom-0 h-full -left-4 pointer-events-none flex justify-center items-center"
+          >
+            <ForwardIcon
+              sx={{
+                filter: "drop-shadow(0px 0px 2px currentColor);",
+              }}
+            />
+          </motion.div>
         ) : (
           ""
         )}

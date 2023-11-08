@@ -1,24 +1,18 @@
-.nav-tracker {
-  background-color: var(--brand-color);
-}
-
 .nav-list {
   &:active {
     transform: scaleX(1.01);
   }
 
-  :global(span) {
-    &:hover {
-      color: var(--text-face-1);
-    }
-  }
-  &:global(:has(+ * .Mui-selected)) {
-    & > span {
-      color: var(--brand-color);
-    }
+  &:hover {
+    color: var(--text-face-1);
   }
 
-  &:global(.Mui-selected) {
+  &:global(.selected) {
+    color: var(--brand-color);
+    background-color: transparent!important;
+  }
+
+  &:global(:has(+ * .selected)) {
     & > span {
       color: var(--brand-color);
     }

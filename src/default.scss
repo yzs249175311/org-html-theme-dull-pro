@@ -42,7 +42,12 @@
 }
 .underline {
   text-decoration: underline;
+	text-decoration-color: var(--brand-color);
 }
+del {
+	text-decoration-color: var(--brand-color);
+}
+
 #postamble p,
 #preamble p {
   font-size: 90%;

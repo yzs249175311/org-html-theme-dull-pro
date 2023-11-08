@@ -80,7 +80,6 @@ const renderSrc = withMatcher(
       <div
         className="relative m-4"
         key={dom.uid}
-        style={{ minWidth: "50%", maxWidth: "100%", width: "fit-content" }}
       >
         <div className="langType absolute right-0 top-0 bg-cus-face-4 rounded-bl-md rounded-tr-lg uppercase z-10 px-2">
           {lang}

@@ -26,7 +26,7 @@ const tocVariants = createVariantsFromPostion("x", "-100%", {
 const itemVariants = createVariantsFromPostion("y", "-100%");
 
 const scrollToSelected = debounce(() => {
-  document?.querySelector(".Mui-selected")?.scrollIntoView({ block: "center" });
+  document?.querySelector(".selected")?.scrollIntoView({ block: "center" });
 }, 1000);
 
 const Navigation: React.FC = () => {
@@ -46,7 +46,7 @@ const Navigation: React.FC = () => {
       initial={tocVariants.initial}
       animate={state}
       variants={tocVariants}
-      className={`w-full shrink-0 h-screen overflow-x-hidden overflow-y-auto ${styles.scrollBar} scroll-smooth`}
+      className={`w-full px-4 shrink-0 h-screen overflow-x-hidden overflow-y-auto ${styles.scrollBar} scroll-smooth`}
     >
       <motion.h2
         className="truncate overflow-hidden p-4 text-3xl text-center sticky top-0 w-full bg-cus-face-1 z-20"
